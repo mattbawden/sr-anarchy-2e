@@ -1,0 +1,21 @@
++div({name: 'character_header'})
+    +input-label({label: 'Streetname', inputObj:{name: 'streetname', type: 'text'}})
++div({name: 'character_attributes'})
+    label(class='header-label') Strength
+    label(class='header-label') Agility
+    label(class='header-label') Logic
+    label(class='header-label') Willpower
+    label(class='header-label') Charisma
+    label(class='header-label') Edge
+    +input({name:'strength', type:'number', value:'0',min: '1', max: '6'})
+    +input({name:'agility', type:'number', value:'0',min: '1', max: '6'})
+    +input({name:'logic', type:'number', value:'0',min: '1', max: '6'})
+    +input({name:'willpower', type:'number', value:'0',min: '1', max: '6'})
+    +input({name:'charisma', type:'number', value:'0',min: '1', max: '6'})
+    +input({name:'edge', type:'number', value:'0',min: '1', max: '6'})
++div({name: 'character_skills'})
+    +input({name:'athletics',type:'number',value:'0', min:'0', max:'8',trigger:{affects:['athletics_total']}})
+    +input({name:'athletics bonus',type:'number',value:'0', trigger:{affects:['athletics_total']}})
+    +input({name:'athletics total',type:'number',value:'0', trigger:{formula:'@{athletics} + @{athletics_bonus} + @{strength}'}})
+    +button({name: 'athletics roll', value: '&{template:custom} {{name= @{streetname} | Athletics Roll}} {{result=[[(@{athletics_total}+?{Dice Modifier|0})d6>?{Advantage|Advantage,4|Standard,5|Disadvantage,6}]]}}'})
+

@@ -5,7 +5,7 @@ include ./mixins/_index.pug
 +hidden({name:'sheet version',value:0})
 //- Now, for our actual sheet. We'll wrap this in a main element and give it an ID of main.
 main#main
-  +tabs({name:'sr-anarchy-2e',defaultActiveTab:'settings'}).flex-box.tiny-gap
+  +tabs({name:'sr-anarchy-2e',defaultActiveTab:'character'}).flex-box.tiny-gap
     +tab({name:'character',container:'article'})
       include articles/_character.pug
     +tab({name:'settings',container:'article'})
