@@ -1,6 +1,7 @@
 {
-  "Concept": "Concept",
-  "Streetname": "Streetname",
+  "CONCEPT": "CONCEPT",
+  "logo": "Shadowrun Anarchy 2e Logo",
+  "STREETNAME": "STREETNAME",
   "tabs-sr-anarchy-2e-character": "Character",
   "tabs-sr-anarchy-2e-settings": "Settings",
   "tabs-sr-anarchy-2e-npc": "NPC"

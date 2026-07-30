@@ -25,7 +25,7 @@ body{
       background-color:var(--backColor);
       a{
         // extend our font selection to the Roll20 interface
-        font-family:var(--font3);
+        font-family: 'DM Mono';
       }
     }
     .tab-content{
@@ -37,6 +37,7 @@ body{
         @include sections.all;
         // Do any other generic styling that you need for your project
         #main{
+          font-family: 'DM Mono';
           .image-logo{
             display: block;
             margin: auto;
@@ -64,8 +65,8 @@ body{
             color: white;
           }
           .k-active-button{
-            background-color: black;
-            color: white;
+            background-color: rgb(241, 185, 0);
+            color: black;
           }
           .tabs__container{
             display: grid;
@@ -73,16 +74,25 @@ body{
             gap: 30px 30px;
             justify-items: start;
           }
+          .input-label{
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 10px 10px;
+            font-family: 'DM Mono';
+            color: rgb(128, 50, 31);
+            font-weight: bold;
+          }
           .input-label__text{
-            background-color: black;
-            color: white;
+            color: rgb(128, 50, 31);
             padding: 4px 8px;
             font-weight: bold;
-            border: 1px solid black;
+            border: 1px solid rgb(128, 50, 31);
           }
           .input-label__input{
             padding: 4px 8px;
-            border: 1px solid black;
+            border: 1px solid rgb(128, 50, 31);
+            color: black;
+            font-weight: normal;
           }
           .fill-box{
             padding: 4px 8px;
@@ -96,12 +106,15 @@ body{
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 10px 20px;
+            padding-bottom: 10px;
+            font-family: 'DM Mono';
           }
           .attributes-header{
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
             grid-template-rows: 30px 30px;
             padding-bottom: 10px;
+            font-family: 'DM Mono';
           }
           .armor-header{
             display: grid;
@@ -150,11 +163,12 @@ body{
           }
           .header-label{
             text-align: center;
-            background-color: black;
-            color: white;
+            background-color: rgb(241, 185, 0);
+            color: rgb(128, 50, 31);
             padding: 4px 8px;
             font-weight: bold;
             border: 1px solid black;
+            font-family: 'DM Mono';
           }
           .weapon-label{
             text-align: center;
@@ -166,9 +180,10 @@ body{
           }
           .skill-grid{
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 30px;
+            grid-template-columns: 2fr 1fr 1fr 1fr 30px;
             grid-template-rows: min-content;
             border: 1px solid black;
+            font-family: 'DM Mono';
           }
           .initiative-grid{
             display: grid;
@@ -213,15 +228,18 @@ body{
             justify-self: start;
           }
           .skill-label{
-            background-color: gray;
-            padding-left: 4px;
-            font-weight: bold;
+            text-align: center;
+            background-color: rgb(241, 185, 0);
+            color: black;
+            padding: 4px 8px;
             border: 1px solid black;
+            font-family: 'DM Mono';
           }
           .skill-input{
             width: 100%;
             padding: 4px 8px;
             color: black;
+            font-family: 'DM Mono';
             border: 1px solid black;
           }
           .adaptive--text{
@@ -269,14 +287,14 @@ body{
             display: block;
             width: 30px;
             border: 1px solid black;
-            background-color: gray;
+            background-color: rgb(241, 185, 0);
             font-weight: bold;
             text-align: center;
           }
           button[type=roll].roll-button::before{
             font-family: 'dicefontd6';
             content: "f";
-            color:white;
+            color:rgb(128, 50, 31);
           }
           .radio-container{
             /* style the layout and whatnot of the radio container as you need to */
@@ -336,6 +354,7 @@ body{
             width: 100%;
             row-gap: 10px;
             background-color: rgb(241, 185, 0);
+            font-family: 'DM Mono';
           }
         }
       }
