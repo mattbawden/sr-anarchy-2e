@@ -1,7 +1,12 @@
 +templateWrapper('custom').header
   //- Create your template here
-  +templateConditionalDisplay('name')
-      h5 {{name}}
+  +templateConditionalDisplay('name').template-name
+    +div({class: 'sheet-template-name'})
+      span.description {{name}}
   +characterLink
   +templateConditionalDisplay('result').template-row
-      span.description {{result}} normal successes and {{riskresult}} risk successes
+    +div({class: 'sheet-template-result'})
+      span.description {{result}} hits
+  +templateConditionalDisplay('riskresult').template-row
+    +div({class: 'sheet-template-riskresult'})
+      span.description {{riskresult}} risk hits

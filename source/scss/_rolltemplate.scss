@@ -19,28 +19,52 @@
   }
   .sheet-template {
       display: grid;
-      background: purple;
-      color: black;
+      background: rgb(241, 185, 0);
+      color: rgb(128, 50, 31);
       /* Header formatting - modify the column layout below */
-      grid-template-columns: auto auto;
+      grid-template-columns: 1fr;
       /* Line height to match default roll template */
       line-height:1.4em;
+      font-family: 'DM Mono';
   }
   .sheet-template .sheet-header {
       grid-column: span 2;
-      background: darkorchid;
-      color: white;
       padding: 5px;
       text-align: left;
       font-weight: bold;
       font-size: 0.8em;
   }
-  .sheet-template .sheet-header h5 {
+  .sheet-template .sheet-template-name {
       margin: 0;
       padding: 0;
       font-size: 1.2em;
       font-weight: bold;
+      text-align: center;
+      color: rgb(128, 50, 31);
+  }
+  .sheet-template .sheet-template-name h4 {
+      margin: 4px;
+      padding-bottom: 10px;
+      font-size: 1em;
+      font-weight: bold;
       text-align: left;
+      color: rgb(128, 50, 31);
+  }
+  .sheet-template .sheet-template-result {
+      margin: 0;
+      padding: 5px;
+      font-size: 1em;
+      font-weight: normal;
+      text-align: left;
+      color: rgb(128, 50, 31);
+  }
+  .sheet-template .sheet-template-riskresult {
+      margin: 0;
+      padding: 5px;
+      font-size: 1em;
+      font-weight: normal;
+      text-align: left;
+      color: rgb(128, 50, 31);
   }
   .sheet-template .sheet-template-row > div {
       padding: 5px;
@@ -51,8 +75,6 @@
       text-align: right;
       font-weight: bold;
       font-size: 1em;
-      background-color: black;
-      color: white;
   }
   .sheet-template .inlinerollresult {
       background: black;
