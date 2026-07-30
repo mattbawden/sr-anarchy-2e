@@ -19,31 +19,44 @@
     </nav>
     <div class="tabs__body tabs--sr-anarchy-2e__body">
       <article class="tabs__container tabs--sr-anarchy-2e__container tabs--sr-anarchy-2e__container--character" data-container-tab="sr-anarchy-2e" data-tab="character">
-  <div name="attr_character_header" title="@{character_header}">
-    <label class="input-label"><span data-i18n="Streetname"></span>
-      <input class="input-label__input" name="attr_streetname" type="text" title="@{streetname}"/>
-    </label>
+  <div class="character-container" name="attr_character_container" title="@{character_container}">
+    <div class="character-header" name="attr_character_header" title="@{character_header}">
+      <label class="input-label"><span data-i18n="Streetname"></span>
+        <input class="input-label__input" name="attr_streetname" type="text" title="@{streetname}"/>
+      </label>
+      <label class="input-label"><span data-i18n="Concept"></span>
+        <input class="input-label__input" name="attr_concept" type="text" title="@{concept}"/>
+      </label>
+    </div>
+    <div class="attributes-header" name="attr_character_attributes" title="@{character_attributes}">
+      <label class="header-label">Strength</label>
+      <label class="header-label">Agility</label>
+      <label class="header-label">Logic</label>
+      <label class="header-label">Willpower</label>
+      <label class="header-label">Charisma</label>
+      <label class="header-label">Edge</label>
+      <input class="attribute-points" name="attr_strength" type="number" value="0" min="1" max="6" title="@{strength}"/>
+      <input class="attribute-points" name="attr_agility" type="number" value="0" min="1" max="6" title="@{agility}"/>
+      <input class="attribute-points" name="attr_logic" type="number" value="0" min="1" max="6" title="@{logic}"/>
+      <input class="attribute-points" name="attr_willpower" type="number" value="0" min="1" max="6" title="@{willpower}"/>
+      <input class="attribute-points" name="attr_charisma" type="number" value="0" min="1" max="6" title="@{charisma}"/>
+      <input class="attribute-points" name="attr_edge" type="number" value="0" min="1" max="6" title="@{edge}"/>
+    </div>
+    <div class="skill-grid" name="attr_character_skills" title="@{character_skills}">
+      <label class="header-label">Skill</label>
+      <label class="header-label">Rank</label>
+      <label class="header-label">Bonus</label>
+      <label class="header-label">Total</label>
+      <label class="header-label"> </label>
+      <label class="skill-label">Athletics (S)</label>
+      <input class="skill-input" name="attr_athletics" type="number" value="0" min="0" max="8" title="@{athletics}"/>
+      <input class="skill-input" name="attr_athletics_bonus" type="number" value="0" title="@{athletics_bonus}"/>
+      <input class="skill-input" name="attr_athletics_total" type="number" value="0" title="@{athletics_total}"/>
+      <button class="roll-button" name="roll_athletics_roll" value="&{template:custom} {{name= @{streetname} | Athletics Roll}} {{result=[[((@{athletics_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]]}} {{riskresult=[[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]]}}" type="roll">
+      </button>
+    </div>
   </div>
-  <div name="attr_character_attributes" title="@{character_attributes}">
-    <label class="header-label">Strength</label>
-    <label class="header-label">Agility</label>
-    <label class="header-label">Logic</label>
-    <label class="header-label">Willpower</label>
-    <label class="header-label">Charisma</label>
-    <label class="header-label">Edge</label>
-    <input name="attr_strength" type="number" value="0" min="1" max="6" title="@{strength}"/>
-    <input name="attr_agility" type="number" value="0" min="1" max="6" title="@{agility}"/>
-    <input name="attr_logic" type="number" value="0" min="1" max="6" title="@{logic}"/>
-    <input name="attr_willpower" type="number" value="0" min="1" max="6" title="@{willpower}"/>
-    <input name="attr_charisma" type="number" value="0" min="1" max="6" title="@{charisma}"/>
-    <input name="attr_edge" type="number" value="0" min="1" max="6" title="@{edge}"/>
-  </div>
-  <div name="attr_character_skills" title="@{character_skills}">
-    <input name="attr_athletics" type="number" value="0" min="0" max="8" title="@{athletics}"/>
-    <input name="attr_athletics_bonus" type="number" value="0" title="@{athletics_bonus}"/>
-    <input name="attr_athletics_total" type="number" value="0" title="@{athletics_total}"/>
-    <button name="roll_athletics_roll" value="&{template:custom} {{name= @{streetname} | Athletics Roll}} {{result=[[(@{athletics_total}+?{Dice Modifier|0})d6>?{Advantage|Advantage,4|Standard,5|Disadvantage,6}]]}}" type="roll">
-    </button>
+  <div class="character-sidebar" name="attr_character_sidebar" title="@{character_sidebar}">
   </div>
       </article>
       <article class="tabs__container tabs--sr-anarchy-2e__container tabs--sr-anarchy-2e__container--settings" data-container-tab="sr-anarchy-2e" data-tab="settings">
@@ -53,10 +66,11 @@
   </div>
 </main>
 <input name="attr_template_start" value="@{whisper}&{template:sr-anarchy-2e} {{character_name=@{character_name}}} {{character_id=@{character_id}}}" type="hidden" title="@{template_start}"/>
-<rolltemplate class="sheet-rolltemplate-sr-anarchy-2e">
-  <div class="template sr-anarchy-2e">{{#character_name}}{{#character_id}}
+<rolltemplate class="sheet-rolltemplate-custom">
+  <div class="template custom header">{{#name}}
+    <h5>{{name}}</h5>{{/name}}{{#character_name}}{{#character_id}}
     <h4 class="character_name">[{{character_name}}](http://journal.roll20.net/character/{{character_id}})</h4>{{/character_id}}{{^character_id}}
-    <h4 class="character_name">{{character_name}}</h4>{{/character_id}}{{/character_name}}
+    <h4 class="character_name">{{character_name}}</h4>{{/character_id}}{{/character_name}}{{#result}}<span class="description">{{result}} normal successes and {{riskresult}} risk successes</span>{{/result}}
   </div>
 </rolltemplate>
 <script type="text/worker">//# sourceURL=sr-anarchy-2e.js
@@ -64,7 +78,7 @@
   const k = (function(){
   const kFuncs = {};
   
-  const cascades = {"attr_character_name":{"name":"character_name","type":"text","defaultValue":"","affects":[],"triggeredFuncs":["setActionCalls"],"listenerFunc":"accessSheet","listener":"change:character_name"},"act_k-network-call":{"name":"k-network-call","type":"action","triggeredFuncs":["kReceive"],"affects":[],"addFuncs":[],"listener":"clicked:k-network-call","listenerFunc":"accessSheet","defaultValue":"","calculation":"","initialFunc":"","formula":""},"attr_sheet_version":{"name":"sheet_version","type":"hidden","triggeredFuncs":[],"affects":[],"addFuncs":[],"listener":"change:sheet_version","listenerFunc":"accessSheet","defaultValue":0,"calculation":"","initialFunc":"","formula":""},"attr_sr_anarchy_2e_tab":{"name":"sr_anarchy_2e_tab","type":"hidden","triggeredFuncs":[],"affects":[],"addFuncs":[],"listener":"change:sr_anarchy_2e_tab","listenerFunc":"accessSheet","defaultValue":"nav-tabs-sr-anarchy-2e--character","calculation":"","initialFunc":"","formula":""},"act_nav-tabs-sr-anarchy-2e--character":{"name":"nav-tabs-sr-anarchy-2e--character","type":"action","triggeredFuncs":["kSwitchTab"],"affects":[],"addFuncs":[],"listener":"clicked:nav-tabs-sr-anarchy-2e--character","listenerFunc":"accessSheet","defaultValue":"","calculation":"","initialFunc":"","formula":""},"act_nav-tabs-sr-anarchy-2e--settings":{"name":"nav-tabs-sr-anarchy-2e--settings","type":"action","triggeredFuncs":["kSwitchTab"],"affects":[],"addFuncs":[],"listener":"clicked:nav-tabs-sr-anarchy-2e--settings","listenerFunc":"accessSheet","defaultValue":"","calculation":"","initialFunc":"","formula":""},"attr_streetname":{"name":"streetname","type":"text","triggeredFuncs":[],"affects":[],"addFuncs":[],"listener":"change:streetname","listenerFunc":"accessSheet","defaultValue":"","calculation":"","initialFunc":"","formula":""},"attr_strength":{"name":"strength","type":"number","triggeredFuncs":[],"affects":["athletics_total"],"addFuncs":[],"listener":"change:strength","listenerFunc":"accessSheet","defaultValue":"0","calculation":"","initialFunc":"","formula":""},"attr_agility":{"name":"agility","type":"number","triggeredFuncs":[],"affects":[],"addFuncs":[],"listener":"change:agility","listenerFunc":"accessSheet","defaultValue":"0","calculation":"","initialFunc":"","formula":""},"attr_logic":{"name":"logic","type":"number","triggeredFuncs":[],"affects":[],"addFuncs":[],"listener":"change:logic","listenerFunc":"accessSheet","defaultValue":"0","calculation":"","initialFunc":"","formula":""},"attr_willpower":{"name":"willpower","type":"number","triggeredFuncs":[],"affects":[],"addFuncs":[],"listener":"change:willpower","listenerFunc":"accessSheet","defaultValue":"0","calculation":"","initialFunc":"","formula":""},"attr_charisma":{"name":"charisma","type":"number","triggeredFuncs":[],"affects":[],"addFuncs":[],"listener":"change:charisma","listenerFunc":"accessSheet","defaultValue":"0","calculation":"","initialFunc":"","formula":""},"attr_edge":{"name":"edge","type":"number","triggeredFuncs":[],"affects":[],"addFuncs":[],"listener":"change:edge","listenerFunc":"accessSheet","defaultValue":"0","calculation":"","initialFunc":"","formula":""},"attr_athletics":{"name":"athletics","type":"number","triggeredFuncs":[],"affects":["athletics_total"],"addFuncs":[],"listener":"change:athletics","listenerFunc":"accessSheet","defaultValue":"0","calculation":"","initialFunc":"","formula":""},"attr_athletics_bonus":{"name":"athletics_bonus","type":"number","triggeredFuncs":[],"affects":["athletics_total"],"addFuncs":[],"listener":"change:athletics_bonus","listenerFunc":"accessSheet","defaultValue":"0","calculation":"","initialFunc":"","formula":""},"attr_athletics_total":{"name":"athletics_total","type":"number","triggeredFuncs":[],"affects":[],"addFuncs":[],"listener":"change:athletics_total","listenerFunc":"accessSheet","defaultValue":"0","calculation":"","initialFunc":"","formula":"@{athletics} + @{athletics_bonus} + @{strength}"},"attr_template_start":{"name":"template_start","type":"hidden","triggeredFuncs":[],"affects":[],"addFuncs":[],"listener":"change:template_start","listenerFunc":"accessSheet","defaultValue":"@{whisper}&{template:sr-anarchy-2e} {{character_name=@{character_name}}} {{character_id=@{character_id}}}","calculation":"","initialFunc":"","formula":""}};
+  const cascades = {"attr_character_name":{"name":"character_name","type":"text","defaultValue":"","affects":[],"triggeredFuncs":["setActionCalls"],"listenerFunc":"accessSheet","listener":"change:character_name"},"act_k-network-call":{"name":"k-network-call","type":"action","triggeredFuncs":["kReceive"],"affects":[],"addFuncs":[],"listener":"clicked:k-network-call","listenerFunc":"accessSheet","defaultValue":"","calculation":"","initialFunc":"","formula":""},"attr_sheet_version":{"name":"sheet_version","type":"hidden","triggeredFuncs":[],"affects":[],"addFuncs":[],"listener":"change:sheet_version","listenerFunc":"accessSheet","defaultValue":0,"calculation":"","initialFunc":"","formula":""},"attr_sr_anarchy_2e_tab":{"name":"sr_anarchy_2e_tab","type":"hidden","triggeredFuncs":[],"affects":[],"addFuncs":[],"listener":"change:sr_anarchy_2e_tab","listenerFunc":"accessSheet","defaultValue":"nav-tabs-sr-anarchy-2e--character","calculation":"","initialFunc":"","formula":""},"act_nav-tabs-sr-anarchy-2e--character":{"name":"nav-tabs-sr-anarchy-2e--character","type":"action","triggeredFuncs":["kSwitchTab"],"affects":[],"addFuncs":[],"listener":"clicked:nav-tabs-sr-anarchy-2e--character","listenerFunc":"accessSheet","defaultValue":"","calculation":"","initialFunc":"","formula":""},"act_nav-tabs-sr-anarchy-2e--settings":{"name":"nav-tabs-sr-anarchy-2e--settings","type":"action","triggeredFuncs":["kSwitchTab"],"affects":[],"addFuncs":[],"listener":"clicked:nav-tabs-sr-anarchy-2e--settings","listenerFunc":"accessSheet","defaultValue":"","calculation":"","initialFunc":"","formula":""},"attr_streetname":{"name":"streetname","type":"text","triggeredFuncs":[],"affects":[],"addFuncs":[],"listener":"change:streetname","listenerFunc":"accessSheet","defaultValue":"","calculation":"","initialFunc":"","formula":""},"attr_concept":{"name":"concept","type":"text","triggeredFuncs":[],"affects":[],"addFuncs":[],"listener":"change:concept","listenerFunc":"accessSheet","defaultValue":"","calculation":"","initialFunc":"","formula":""},"attr_strength":{"name":"strength","type":"number","triggeredFuncs":[],"affects":["athletics_total"],"addFuncs":[],"listener":"change:strength","listenerFunc":"accessSheet","defaultValue":"0","calculation":"","initialFunc":"","formula":""},"attr_agility":{"name":"agility","type":"number","triggeredFuncs":[],"affects":[],"addFuncs":[],"listener":"change:agility","listenerFunc":"accessSheet","defaultValue":"0","calculation":"","initialFunc":"","formula":""},"attr_logic":{"name":"logic","type":"number","triggeredFuncs":[],"affects":[],"addFuncs":[],"listener":"change:logic","listenerFunc":"accessSheet","defaultValue":"0","calculation":"","initialFunc":"","formula":""},"attr_willpower":{"name":"willpower","type":"number","triggeredFuncs":[],"affects":[],"addFuncs":[],"listener":"change:willpower","listenerFunc":"accessSheet","defaultValue":"0","calculation":"","initialFunc":"","formula":""},"attr_charisma":{"name":"charisma","type":"number","triggeredFuncs":[],"affects":[],"addFuncs":[],"listener":"change:charisma","listenerFunc":"accessSheet","defaultValue":"0","calculation":"","initialFunc":"","formula":""},"attr_edge":{"name":"edge","type":"number","triggeredFuncs":[],"affects":[],"addFuncs":[],"listener":"change:edge","listenerFunc":"accessSheet","defaultValue":"0","calculation":"","initialFunc":"","formula":""},"attr_athletics":{"name":"athletics","type":"number","triggeredFuncs":[],"affects":["athletics_total"],"addFuncs":[],"listener":"change:athletics","listenerFunc":"accessSheet","defaultValue":"0","calculation":"","initialFunc":"","formula":""},"attr_athletics_bonus":{"name":"athletics_bonus","type":"number","triggeredFuncs":[],"affects":["athletics_total"],"addFuncs":[],"listener":"change:athletics_bonus","listenerFunc":"accessSheet","defaultValue":"0","calculation":"","initialFunc":"","formula":""},"attr_athletics_total":{"name":"athletics_total","type":"number","triggeredFuncs":[],"affects":[],"addFuncs":[],"listener":"change:athletics_total","listenerFunc":"accessSheet","defaultValue":"0","calculation":"","initialFunc":"","formula":"@{athletics} + @{athletics_bonus} + @{strength}"},"attr_template_start":{"name":"template_start","type":"hidden","triggeredFuncs":[],"affects":[],"addFuncs":[],"listener":"change:template_start","listenerFunc":"accessSheet","defaultValue":"@{whisper}&{template:sr-anarchy-2e} {{character_name=@{character_name}}} {{character_id=@{character_id}}}","calculation":"","initialFunc":"","formula":""}};
   
   kFuncs.cascades = cascades;
   

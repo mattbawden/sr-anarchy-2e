@@ -36,6 +36,301 @@ body{
         @include components.all;
         @include sections.all;
         // Do any other generic styling that you need for your project
+        #main{
+          .image-logo{
+            display: block;
+            margin: auto;
+            width: 50%;
+          }
+          .tabs{
+            display:block;
+          }
+          .tabs__header{
+            display: block;
+            margin: auto;
+            width: 50%;
+          }
+          .tabs__button{
+            color:var(--fontColor);
+            font-style: normal;
+            border: 1px solid #dddddd;
+            border-radius: 4px 4px 0 0;
+            box-shadow: none;
+            padding: 9px 12px;
+            height: 16px;
+          }
+          button:not(.k-active-tab):hover{
+            background-color: green;
+            color: white;
+          }
+          .k-active-button{
+            background-color: black;
+            color: white;
+          }
+          .tabs__container{
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px 30px;
+            justify-items: start;
+          }
+          .input-label__text{
+            background-color: black;
+            color: white;
+            padding: 4px 8px;
+            font-weight: bold;
+            border: 1px solid black;
+          }
+          .input-label__input{
+            padding: 4px 8px;
+            border: 1px solid black;
+          }
+          .fill-box{
+            padding: 4px 8px;
+            border: 1px solid black;
+          }
+          .fill-left__radio{
+            padding: 1px;
+            border: 1px solid black;
+          }
+          .character-header{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 20px;
+          }
+          .attributes-header{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 30px 30px;
+            padding-bottom: 10px;
+          }
+          .armor-header{
+            display: grid;
+            grid-template-columns: 1fr 50px 60px 1fr;
+            border: 1px solid black;
+            margin-top: 10px;
+          }
+          .armor-input{
+            width: 100%;
+            padding: 4px 8px;
+          }
+          .attribute-grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            border: 1px solid black;
+          }
+          .attribute-label{
+            background-color: gray;
+            padding: 4px 8px;
+            font-weight: bold;
+            border: 1px solid black;
+          }
+          .attribute-points{
+            width: 100%;
+            padding: 4px 8px;
+            color: black;
+            border: 1px solid black;
+          }
+          .span2{
+            grid-column: 1 / span 2;
+          }
+          .startspan3{
+            grid-column: 1 / span 3;
+          }
+          .startspan4{
+            grid-column: 1 / span 4;
+          }
+          .startspan6{
+            grid-column: 1 / span 6;
+          }
+          .span3{
+            grid-column: 2 / span 3;
+          }
+          .span4{
+            grid-column: 2 / span 4;
+          }
+          .header-label{
+            text-align: center;
+            background-color: black;
+            color: white;
+            padding: 4px 8px;
+            font-weight: bold;
+            border: 1px solid black;
+          }
+          .weapon-label{
+            text-align: center;
+            background-color: rgb(34, 33, 33);
+            color: white;
+            padding: 4px 8px;
+            font-weight: bold;
+            border: 1px solid black;
+          }
+          .skill-grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 30px;
+            grid-template-rows: min-content;
+            border: 1px solid black;
+          }
+          .initiative-grid{
+            display: grid;
+            grid-template-columns: 100px 30px;
+            grid-template-rows: min-content;
+            column-gap: 10px;
+          }
+          .armor-roll{
+            display: grid;
+            grid-template-columns: 100px 30px;
+            grid-template-rows: min-content;
+            column-gap: 10px;
+          }
+          .general-roll{
+            display: grid;
+            grid-template-columns: 100px 30px;
+            grid-template-rows: min-content;
+            column-gap: 10px;
+          }
+          .equipment-grid{
+            display: grid;
+            grid-template-rows: min-content;
+            row-gap: 5px;
+            grid-template-columns: 1fr 1fr 1fr;
+          }
+          .equipment-grid .input-label__input{
+            width: 50%;
+          }
+          .encumbrance-grid{
+            display: grid;
+            grid-template-rows: min-content;
+            row-gap: 5px;
+            grid-template-columns: 1fr 1fr 1fr;
+          }
+          .magic-grid{
+            display: grid;
+            grid-template-rows: min-content;
+            row-gap: 5px;
+            grid-template-columns: 1fr 1fr 1fr;
+          }
+          .grid-left{
+            justify-self: start;
+          }
+          .skill-label{
+            background-color: gray;
+            padding-left: 4px;
+            font-weight: bold;
+            border: 1px solid black;
+          }
+          .skill-input{
+            width: 100%;
+            padding: 4px 8px;
+            color: black;
+            border: 1px solid black;
+          }
+          .adaptive--text{
+            width: 100%;
+          }
+          .adaptive--text__textarea{
+            width: 100%;
+            padding: 4px 8px;
+            border: 1px solid black;
+          }
+          .other-attributes{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            row-gap: 10px;
+          }
+          .lineage-traits{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            row-gap: 10px;
+            padding-top: 10px;
+          }
+          .roller-block{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            row-gap: 10px;
+            padding-top: 10px;
+          }
+          .other-elements{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            row-gap: 10px;
+            column-gap: 5px;
+          }
+          .other-block{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            row-gap: 10px;
+          }
+          .roll-button{
+            display: block;
+            width: 30px;
+            border: 1px solid black;
+            background-color: gray;
+            font-weight: bold;
+            text-align: center;
+          }
+          button[type=roll].roll-button::before{
+            font-family: 'dicefontd6';
+            content: "f";
+            color:white;
+          }
+          .radio-container{
+            /* style the layout and whatnot of the radio container as you need to */
+            display: flex;
+            gap: 0.5rem;
+          }
+          .radio-input{
+            /* appearance none allows us to style radios and checkboxes as if they were divs */
+            appearance: none;
+            /* Style the radio as you want for it's unchecked state */
+            border-radius: 50%;
+            border: 1px solid black;
+            width: 10px;
+            height: 10px;
+            display: block;
+          }
+          /* If the radiobox is checked, or if it has a checked radiobox after it, style it as if it was checked */
+          .radio-input:checked,
+          .radio-input:has(~ .radiobox:checked){
+            /* Style the check state as you want */
+            background-color: black;
+          }
+          .repeating-container--attacks h2{
+            font-size: 16px;
+            background-color: black;
+            color: white;
+            padding: 4px 8px;
+            font-weight: bold;
+          }
+          .repeat-columns{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 2fr 30px;
+            gap: 10px;
+            width: 100%;
+          }
+          .repeat-columns h5{
+            font-size: 16px;
+            padding: 4px 8px;
+            font-weight: bold;
+            background-color: gray;
+          }
+          .weapon-grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 2fr 30px;
+            gap: 10px;
+            width: 100%;
+          }
+          .weapon-input{
+            text-align: center;
+            width: 100%;
+            padding: 4px 8px;
+            border: 1px solid black;
+          }
+        }
       }
     }
   }

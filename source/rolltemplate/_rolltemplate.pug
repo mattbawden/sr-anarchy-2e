@@ -1,3 +1,7 @@
-+templateWrapper(templateName)
++templateWrapper('custom').header
   //- Create your template here
+  +templateConditionalDisplay('name')
+      h5 {{name}}
   +characterLink
+  +templateConditionalDisplay('result').template-row
+      span.description {{result}} normal successes and {{riskresult}} risk successes
