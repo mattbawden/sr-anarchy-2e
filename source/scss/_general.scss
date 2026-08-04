@@ -74,6 +74,18 @@ body{
             gap: 15px 15px;
             justify-items: start;
           }
+          .tabs--sr-anarchy-2e__container--amps{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px 15px;
+            justify-items: start;
+          }
+          .tabs--sr-anarchy-2e__container--gear{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px 15px;
+            justify-items: start;
+          }
           .input-label{
             display: grid;
             grid-template-columns: 1fr 2fr;
@@ -193,6 +205,13 @@ body{
             border: 1px solid black;
             font-family: 'DM Mono';
           }
+          .amps-grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+            grid-template-rows: min-content;
+            font-family: 'DM Mono';
+            gap: 10px;
+          }
           .initiative-grid{
             display: grid;
             grid-template-columns: 100px 30px;
@@ -244,6 +263,12 @@ body{
             font-family: 'DM Mono';
           }
           .skill-input{
+            width: 100%;
+            color: black;
+            font-family: 'DM Mono';
+            border: 1px solid black;
+          }
+          .amps-input{
             width: 100%;
             padding: 4px 8px;
             color: black;
@@ -327,18 +352,21 @@ body{
             /* Style the check state as you want */
             background-color: black;
           }
-          .repeating-container--attacks h2{
+          .repeating-container--shadowamps h2{
             font-size: 16px;
-            background-color: black;
-            color: white;
+            background-color: rgb(241, 185, 0);
+            color: rgb(128, 50, 31);
             padding: 4px 8px;
             font-weight: bold;
+            text-align: left;
           }
           .repeat-columns{
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 2fr 30px;
+            grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
             gap: 10px;
             width: 100%;
+            background-color: rgb(241, 185, 0);
+            color: rgb(128, 50, 31);
           }
           .repeat-columns h5{
             font-size: 16px;

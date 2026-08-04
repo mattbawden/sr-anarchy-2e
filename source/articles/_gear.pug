@@ -1,20 +1,20 @@
 +div({name: 'character_container'}).character-container
-    +repeating_section('shadowamps', 'amps', ['name','type','cost','level','effects'])
+    +repeating_section('shadowamps', 'gear', ['name','type','cost','level','effects'])
         +div({name:'ampsgrid'}).amps-grid
             +text({name:'name'}).amps-input
             +select({name:'type'}).amps-input
                 +option({value:''})
                     |Select One
                 +option({value:'quality'})
-                    |Quality
+                    |Weapon
                 +option({value:'contact'})
-                    |Contact
+                    |Equipment
                 +option({value:'augmentation'})
-                    |Augmentation
+                    |Matrix
                 +option({value:'magic'})
-                    |Magic
+                    |Rigger
                 +option({value:'resonance'})
-                    |Resonance
+                    |Medtech
             +text({name:'cost'}).amps-input
             +number({name:'level'}).amps-input
             +textarea({name:'effects'}).amps-input

@@ -1,9 +1,17 @@
 {
+  "amps": "amps",
   "CONCEPT": "CONCEPT",
+  "cost": "cost",
+  "effects": "effects",
+  "gear": "gear",
+  "level": "level",
   "logo": "Shadowrun Anarchy 2e Logo",
+  "name": "name",
   "STREETNAME": "STREETNAME",
   "tabs-sr-anarchy-2e-amps": "Amps",
   "tabs-sr-anarchy-2e-character": "Character",
-  "tabs-sr-anarchy-2e-settings": "Settings",
-  "tabs-sr-anarchy-2e-npc": "NPC"
+  "tabs-sr-anarchy-2e-gear": "Gear",
+  "type": "type",
+  "tabs-sr-anarchy-2e-npc": "NPC",
+  "tabs-sr-anarchy-2e-settings": "Settings"
 }
