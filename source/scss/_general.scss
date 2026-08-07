@@ -107,8 +107,10 @@ body{
             font-weight: normal;
           }
           .fill-box{
+            display: flex;
             padding: 4px 8px;
             border: 1px solid black;
+            align-items: center;
           }
           .fill-left__radio{
             padding: 1px;
@@ -124,6 +126,28 @@ body{
           .attributes-header{
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 30px 30px;
+            padding-bottom: 10px;
+            font-family: 'DM Mono';
+          }
+          .two-column{
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 10px;
+            padding-bottom: 10px;
+            font-family: 'DM Mono';
+            font-size: 1rem;
+          }
+          .other-attributes{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 30px 30px;
+            padding-bottom: 10px;
+            font-family: 'DM Mono';
+          }
+          .wound-threshold{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-template-rows: 30px 30px;
             padding-bottom: 10px;
             font-family: 'DM Mono';
@@ -182,6 +206,16 @@ body{
             border: 1px solid black;
             font-family: 'DM Mono';
           }
+          .other-label{
+            text-align: center;
+            background-color: rgb(241, 185, 0);
+            color: rgb(128, 50, 31);
+            padding: 4px 8px;
+            font-weight: bold;
+            border: 1px solid black;
+            font-family: 'DM Mono';
+            font-size: 1rem;
+          }
           .header-sidebar{
             text-align: center;
             background-color: rgb(241, 185, 0);
@@ -208,6 +242,13 @@ body{
           .amps-grid{
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+            grid-template-rows: min-content;
+            font-family: 'DM Mono';
+            gap: 10px;
+          }
+          .gear-grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
             grid-template-rows: min-content;
             font-family: 'DM Mono';
             gap: 10px;
@@ -275,6 +316,13 @@ body{
             font-family: 'DM Mono';
             border: 1px solid black;
           }
+          .gear-input{
+            width: 100%;
+            padding: 4px 8px;
+            color: black;
+            font-family: 'DM Mono';
+            border: 1px solid black;
+          }
           .adaptive--text{
             width: 100%;
           }
@@ -283,19 +331,6 @@ body{
             padding: 4px 8px;
             border: 1px solid black;
             background-color: white;
-          }
-          .other-attributes{
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            row-gap: 10px;
-          }
-          .lineage-traits{
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            row-gap: 10px;
-            padding-top: 10px;
           }
           .roller-block{
             display: flex;

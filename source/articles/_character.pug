@@ -15,6 +15,48 @@
         +input({name:'willpower', type:'number', value:'0',min: '1', max: '6'}).attribute-points
         +input({name:'charisma', type:'number', value:'0',min: '1', max: '6'}).attribute-points
         +input({name:'edge', type:'number', value:'0',min: '1', max: '6'}).attribute-points
+    +div({name: 'two_column'}).two-column
+        +div({name: 'other_attributes'}).other-attributes
+            label(class='other-label') ARMOR
+            +input({name:'armor', type:'number', value:'0'}).attribute-points
+            label(class='other-label') PROTECTION
+            +input({name:'protection', type:'number', value:'0'}).attribute-points
+            label(class='other-label') FIREWALL
+            +input({name:'firewall', type:'number', value:'0'}).attribute-points
+        +div({name: 'wound_threshold'}).wound-threshold
+            label(class='other-label') WOUNDS
+            +input({name:'lightnum', type:'number', value:'0', max:'3'}).attribute-points
+            +input({name:'seriousnum', type:'number', value:'0', max:'2'}).attribute-points
+            +input({name:'incapnum', type:'number', value:'0', max:'1'}).attribute-points
+            label(class='other-label') CURRENT
+            span(class='fill-box')
+                +div({class:'radio-container'})
+                    +input({name:'light1', type:'checkbox', value:'1', id:'light-1'}).radio-input
+                    +input({name:'light2', type:'checkbox', value:'2', id:'light-2'}).radio-input
+                    +input({name:'light3', type:'checkbox', value:'3', id:'light-3'}).radio-input
+            span(class='fill-box')
+                +div({class:'radio-container'})
+                    +input({name:'serious1', type:'checkbox', value:'1', id:'serious-1'}).radio-input
+                    +input({name:'serious2', type:'checkbox', value:'2', id:'serious-2'}).radio-input
+            span(class='fill-box')
+                +div({class:'radio-container'})
+                    +input({name:'incap1', type:'checkbox', value:'1', id:'incap-1'}).radio-input
+            label(class='other-label') THRESHOLDS
+            label(class='other-label') LIGHT
+            label(class='other-label') SERIOUS
+            label(class='other-label') INCAP.
+            +input({name:'armor_threshold', type:'text', value:'Armor', readonly:true}).attribute-points
+            +input({name:'light_threshold', type:'number', value:'0', trigger:{formula:'@{strength} + @{armor}'}, readonly:true}).attribute-points
+            +input({name:'serious_threshold', type:'number', value:'0', trigger:{formula:'@{strength} + @{armor} + 3'}, readonly:true}).attribute-points
+            +input({name:'incap_threshold', type:'number', value:'0', trigger:{formula:'@{strength} + @{armor} + 6'}, readonly:true}).attribute-points
+            +input({name:'prot_threshold', type:'text', value:'Protection', readonly:true}).attribute-points
+            +input({name:'light_prot', type:'number', value:'0', trigger:{formula:'@{willpower} + @{protection}'}, readonly:true}).attribute-points
+            +input({name:'serious_prot', type:'number', value:'0', trigger:{formula:'@{willpower} + @{protection} + 3'}, readonly:true}).attribute-points
+            +input({name:'incap_prot', type:'number', value:'0', trigger:{formula:'@{willpower} + @{protection} + 6'}, readonly:true}).attribute-points
+            +input({name:'matrix_threshold', type:'text', value:'Matrix', readonly:true}).attribute-points
+            +input({name:'light_matrix', type:'number', value:'0', trigger:{formula:'@{firewall}'}, readonly:true}).attribute-points
+            +input({name:'serious_matrix', type:'number', value:'0', trigger:{formula:'@{firewall} * 2'}, readonly:true}).attribute-points
+            +input({name:'incap_matrix', type:'number', value:'0', trigger:{formula:'@{firewall} * 3'}, readonly:true}).attribute-points
     +div({name: 'character_skills'}).skill-grid
         label(class='header-label') SKILL
         label(class='header-label') RATING
@@ -155,7 +197,7 @@
         label(class='header-label') KNOWLEDGE SKILLS
         +adaptiveTextarea({name:'knowledge', placeholder:'Enter Knowledge Skills here...'  })
 +div({name: 'character_sidebar'}).character-sidebar
-    +img({name: 'logo', src: 'https://github.com/mattbawden/sr-anarchy-2e/blob/main/assets/images/character/shadowrun-logo.png?raw=true', alt: 'Shadowrun Anarchy 2e Logo'})
+    +img({name: 'logo', src: 'https://raw.githubusercontent.com/mattbawden/sr-anarchy-2e/refs/heads/main/assets/images/character/shadowrun-logo.png', alt: 'Shadowrun Anarchy 2e Logo'})
     +div({name: 'descriptors'}).other-elements
         label(class='header-sidebar') KEYWORDS
         +adaptiveTextarea({name:'keywords', placeholder:'Enter Keywords here...'  })

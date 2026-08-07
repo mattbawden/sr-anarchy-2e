@@ -1,20 +1,22 @@
 +div({name: 'character_container'}).character-container
-    +repeating_section('shadowamps', 'gear', ['name','type','cost','level','effects'])
-        +div({name:'ampsgrid'}).amps-grid
-            +text({name:'name'}).amps-input
-            +select({name:'type'}).amps-input
+    +repeating_section('shadowamps', 'gear', ['name','type','cost','rating','dv','range','effects'])
+        +div({name:'geargrid'}).gear-grid
+            +text({name:'name'}).gear-input
+            +select({name:'type'}).gear-input
                 +option({value:''})
                     |Select One
-                +option({value:'quality'})
+                +option({value:'weapon'})
                     |Weapon
-                +option({value:'contact'})
+                +option({value:'equipment'})
                     |Equipment
-                +option({value:'augmentation'})
+                +option({value:'matrix'})
                     |Matrix
-                +option({value:'magic'})
+                +option({value:'rigger'})
                     |Rigger
-                +option({value:'resonance'})
+                +option({value:'medtech'})
                     |Medtech
-            +text({name:'cost'}).amps-input
-            +number({name:'level'}).amps-input
-            +textarea({name:'effects'}).amps-input
+            +text({name:'cost'}).gear-input
+            +number({name:'rating'}).gear-input
+            +number({name:'dv'}).gear-input
+            +text({name:'range'}).gear-input
+            +textarea({name:'effects'}).gear-input
