@@ -68,9 +68,9 @@ body{
             background-color: rgb(241, 185, 0);
             color: black;
           }
-          .tabs__container{
+          .tabs--sr-anarchy-2e__container--character{
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 250px;
             gap: 15px 15px;
             justify-items: start;
           }
@@ -86,6 +86,9 @@ body{
             gap: 15px 15px;
             justify-items: start;
           }
+          .character-container{
+            font-size: 0.8rem;
+          }
           .input-label{
             display: grid;
             grid-template-columns: 1fr 2fr;
@@ -93,6 +96,7 @@ body{
             font-family: 'DM Mono';
             color: rgb(128, 50, 31);
             font-weight: bold;
+            font-size: 0.8rem;
           }
           .input-label__text{
             color: rgb(128, 50, 31);
@@ -122,6 +126,7 @@ body{
             gap: 10px 20px;
             padding-bottom: 10px;
             font-family: 'DM Mono';
+            font-size: 0.8rem;
           }
           .attributes-header{
             display: grid;
@@ -144,6 +149,7 @@ body{
             grid-template-rows: 30px 30px;
             padding-bottom: 10px;
             font-family: 'DM Mono';
+            font-size: 0.8rem;
           }
           .wound-threshold{
             display: grid;
@@ -172,12 +178,16 @@ body{
             padding: 4px 8px;
             font-weight: bold;
             border: 1px solid black;
+            font-family: 'DM Mono';
+            font-size: 0.8rem;
           }
           .attribute-points{
             width: 100%;
             padding: 4px 8px;
             color: black;
             border: 1px solid black;
+            font-family: 'DM Mono';
+            font-size: 0.8rem;
           }
           .span2{
             grid-column: 1 / span 2;
@@ -205,6 +215,7 @@ body{
             font-weight: bold;
             border: 1px solid black;
             font-family: 'DM Mono';
+            font-size: 0.8rem;
           }
           .other-label{
             text-align: center;
@@ -214,7 +225,16 @@ body{
             font-weight: bold;
             border: 1px solid black;
             font-family: 'DM Mono';
-            font-size: 1rem;
+            font-size: 0.8rem;
+          }
+          .risk-label{
+            text-align: center;
+            background-color: rgb(241, 185, 0);
+            color: rgb(128, 50, 31);
+            padding: 4px 8px;
+            font-weight: bold;
+            font-family: 'DM Mono';
+            font-size: 0.5rem;
           }
           .header-sidebar{
             text-align: center;
@@ -223,6 +243,15 @@ body{
             padding: 4px 8px;
             font-weight: bold;
             font-family: 'DM Mono';
+          }
+          .header-sidebar-small{
+            text-align: center;
+            background-color: rgb(241, 185, 0);
+            color: rgb(128, 50, 31);
+            padding: 2px 4px;
+            font-weight: bold;
+            font-family: 'DM Mono';
+            font-size: 0.6rem;
           }
           .weapon-label{
             text-align: center;
@@ -252,6 +281,12 @@ body{
             grid-template-rows: min-content;
             font-family: 'DM Mono';
             gap: 10px;
+          }
+          .risk-grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: min-content;
+            font-family: 'DM Mono';
           }
           .initiative-grid{
             display: grid;
@@ -302,12 +337,14 @@ body{
             padding: 4px 8px;
             border: 1px solid black;
             font-family: 'DM Mono';
+            font-size: 0.8rem;
           }
           .skill-input{
             width: 100%;
             color: black;
             font-family: 'DM Mono';
             border: 1px solid black;
+            font-size: 0.8rem;
           }
           .amps-input{
             width: 100%;
@@ -322,6 +359,13 @@ body{
             color: black;
             font-family: 'DM Mono';
             border: 1px solid black;
+          }
+          .risk-input{
+            width: 100%;
+            color: rgb(128, 50, 31);
+            font-family: 'DM Mono';
+            font-size: 0.5rem;
+            padding: 2px;
           }
           .adaptive--text{
             width: 100%;
@@ -346,6 +390,8 @@ body{
             row-gap: 10px;
             column-gap: 5px;
             padding-top: 10px;
+            font-family: 'DM Mono';
+            font-size: 0.8rem;
           }
           .other-block{
             display: flex;
@@ -395,6 +441,22 @@ body{
             font-weight: bold;
             text-align: left;
           }
+          .repeating-container--gearamps h2{
+            font-size: 16px;
+            background-color: rgb(241, 185, 0);
+            color: rgb(128, 50, 31);
+            padding: 4px 8px;
+            font-weight: bold;
+            text-align: left;
+          }
+          .repeating-container--gearamps .repeat-columns{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+            gap: 10px;
+            width: 100%;
+            background-color: rgb(241, 185, 0);
+            color: rgb(128, 50, 31);
+          }
           .repeat-columns{
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
@@ -436,5 +498,6 @@ body{
   }
   &.sheet-darkmode{
     @include variables.dark;
+    color: black;
   }
 }

@@ -1187,9 +1187,9 @@ body .ui-dialog .tab-content .charsheet #main .k-active-button {
   background-color: rgb(241, 185, 0);
   color: black;
 }
-body .ui-dialog .tab-content .charsheet #main .tabs__container {
+body .ui-dialog .tab-content .charsheet #main .tabs--sr-anarchy-2e__container--character {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 250px;
   gap: 15px 15px;
   justify-items: start;
 }
@@ -1205,6 +1205,9 @@ body .ui-dialog .tab-content .charsheet #main .tabs--sr-anarchy-2e__container--g
   gap: 15px 15px;
   justify-items: start;
 }
+body .ui-dialog .tab-content .charsheet #main .character-container {
+  font-size: 0.8rem;
+}
 body .ui-dialog .tab-content .charsheet #main .input-label {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -1212,6 +1215,7 @@ body .ui-dialog .tab-content .charsheet #main .input-label {
   font-family: "DM Mono";
   color: rgb(128, 50, 31);
   font-weight: bold;
+  font-size: 0.8rem;
 }
 body .ui-dialog .tab-content .charsheet #main .input-label__text {
   color: rgb(128, 50, 31);
@@ -1241,6 +1245,7 @@ body .ui-dialog .tab-content .charsheet #main .character-header {
   gap: 10px 20px;
   padding-bottom: 10px;
   font-family: "DM Mono";
+  font-size: 0.8rem;
 }
 body .ui-dialog .tab-content .charsheet #main .attributes-header {
   display: grid;
@@ -1263,6 +1268,7 @@ body .ui-dialog .tab-content .charsheet #main .other-attributes {
   grid-template-rows: 30px 30px;
   padding-bottom: 10px;
   font-family: "DM Mono";
+  font-size: 0.8rem;
 }
 body .ui-dialog .tab-content .charsheet #main .wound-threshold {
   display: grid;
@@ -1291,12 +1297,16 @@ body .ui-dialog .tab-content .charsheet #main .attribute-label {
   padding: 4px 8px;
   font-weight: bold;
   border: 1px solid black;
+  font-family: "DM Mono";
+  font-size: 0.8rem;
 }
 body .ui-dialog .tab-content .charsheet #main .attribute-points {
   width: 100%;
   padding: 4px 8px;
   color: black;
   border: 1px solid black;
+  font-family: "DM Mono";
+  font-size: 0.8rem;
 }
 body .ui-dialog .tab-content .charsheet #main .span2 {
   grid-column: 1/span 2;
@@ -1324,6 +1334,7 @@ body .ui-dialog .tab-content .charsheet #main .header-label {
   font-weight: bold;
   border: 1px solid black;
   font-family: "DM Mono";
+  font-size: 0.8rem;
 }
 body .ui-dialog .tab-content .charsheet #main .other-label {
   text-align: center;
@@ -1333,7 +1344,16 @@ body .ui-dialog .tab-content .charsheet #main .other-label {
   font-weight: bold;
   border: 1px solid black;
   font-family: "DM Mono";
-  font-size: 1rem;
+  font-size: 0.8rem;
+}
+body .ui-dialog .tab-content .charsheet #main .risk-label {
+  text-align: center;
+  background-color: rgb(241, 185, 0);
+  color: rgb(128, 50, 31);
+  padding: 4px 8px;
+  font-weight: bold;
+  font-family: "DM Mono";
+  font-size: 0.5rem;
 }
 body .ui-dialog .tab-content .charsheet #main .header-sidebar {
   text-align: center;
@@ -1342,6 +1362,15 @@ body .ui-dialog .tab-content .charsheet #main .header-sidebar {
   padding: 4px 8px;
   font-weight: bold;
   font-family: "DM Mono";
+}
+body .ui-dialog .tab-content .charsheet #main .header-sidebar-small {
+  text-align: center;
+  background-color: rgb(241, 185, 0);
+  color: rgb(128, 50, 31);
+  padding: 2px 4px;
+  font-weight: bold;
+  font-family: "DM Mono";
+  font-size: 0.6rem;
 }
 body .ui-dialog .tab-content .charsheet #main .weapon-label {
   text-align: center;
@@ -1371,6 +1400,12 @@ body .ui-dialog .tab-content .charsheet #main .gear-grid {
   grid-template-rows: min-content;
   font-family: "DM Mono";
   gap: 10px;
+}
+body .ui-dialog .tab-content .charsheet #main .risk-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: min-content;
+  font-family: "DM Mono";
 }
 body .ui-dialog .tab-content .charsheet #main .initiative-grid {
   display: grid;
@@ -1421,12 +1456,14 @@ body .ui-dialog .tab-content .charsheet #main .skill-label {
   padding: 4px 8px;
   border: 1px solid black;
   font-family: "DM Mono";
+  font-size: 0.8rem;
 }
 body .ui-dialog .tab-content .charsheet #main .skill-input {
   width: 100%;
   color: black;
   font-family: "DM Mono";
   border: 1px solid black;
+  font-size: 0.8rem;
 }
 body .ui-dialog .tab-content .charsheet #main .amps-input {
   width: 100%;
@@ -1441,6 +1478,13 @@ body .ui-dialog .tab-content .charsheet #main .gear-input {
   color: black;
   font-family: "DM Mono";
   border: 1px solid black;
+}
+body .ui-dialog .tab-content .charsheet #main .risk-input {
+  width: 100%;
+  color: rgb(128, 50, 31);
+  font-family: "DM Mono";
+  font-size: 0.5rem;
+  padding: 2px;
 }
 body .ui-dialog .tab-content .charsheet #main .adaptive--text {
   width: 100%;
@@ -1465,6 +1509,8 @@ body .ui-dialog .tab-content .charsheet #main .other-elements {
   row-gap: 10px;
   column-gap: 5px;
   padding-top: 10px;
+  font-family: "DM Mono";
+  font-size: 0.8rem;
 }
 body .ui-dialog .tab-content .charsheet #main .other-block {
   display: flex;
@@ -1516,6 +1562,22 @@ body .ui-dialog .tab-content .charsheet #main .repeating-container--shadowamps h
   font-weight: bold;
   text-align: left;
 }
+body .ui-dialog .tab-content .charsheet #main .repeating-container--gearamps h2, body .ui-dialog .tab-content .charsheet #main .repeating-container--gearamps .input-label:not(.stacked).large > [name] {
+  font-size: 16px;
+  background-color: rgb(241, 185, 0);
+  color: rgb(128, 50, 31);
+  padding: 4px 8px;
+  font-weight: bold;
+  text-align: left;
+}
+body .ui-dialog .tab-content .charsheet #main .repeating-container--gearamps .repeat-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+  gap: 10px;
+  width: 100%;
+  background-color: rgb(241, 185, 0);
+  color: rgb(128, 50, 31);
+}
 body .ui-dialog .tab-content .charsheet #main .repeat-columns {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
@@ -1561,6 +1623,7 @@ body.sheet-darkmode {
   --borderColor:var(--dm-borderColor);
   --fontColor:var(--dm-fontColor);
   --disabledColor:var(--dm-disabledColor);
+  color: black;
 }
 
 .sheet-rolltemplate-custom {
@@ -2762,6 +2825,14 @@ body.sheet-darkmode {
   color: rgb(128, 50, 31);
 }
 .sheet-rolltemplate-custom .sheet-template .sheet-template-riskresult {
+  margin: 0;
+  padding: 5px;
+  font-size: 1em;
+  font-weight: normal;
+  text-align: left;
+  color: rgb(128, 50, 31);
+}
+.sheet-rolltemplate-custom .sheet-template .sheet-template-riskreduction {
   margin: 0;
   padding: 5px;
   font-size: 1em;
