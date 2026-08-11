@@ -1208,6 +1208,12 @@ body .ui-dialog .tab-content .charsheet #main .tabs--sr-anarchy-2e__container--g
 body .ui-dialog .tab-content .charsheet #main .character-container {
   font-size: 0.8rem;
 }
+body .ui-dialog .tab-content .charsheet #main .gear-container {
+  font-size: 0.8rem;
+}
+body .ui-dialog .tab-content .charsheet #main .amps-container {
+  font-size: 0.8rem;
+}
 body .ui-dialog .tab-content .charsheet #main .input-label {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -1389,16 +1395,18 @@ body .ui-dialog .tab-content .charsheet #main .skill-grid {
 }
 body .ui-dialog .tab-content .charsheet #main .amps-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
   grid-template-rows: min-content;
   font-family: "DM Mono";
+  font-size: 0.8rem;
   gap: 10px;
 }
 body .ui-dialog .tab-content .charsheet #main .gear-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+  grid-template-columns: 2fr 1fr 1fr 0.75fr 0.75fr 1.5fr 2fr;
   grid-template-rows: min-content;
   font-family: "DM Mono";
+  font-size: 0.8rem;
   gap: 10px;
 }
 body .ui-dialog .tab-content .charsheet #main .risk-grid {
@@ -1470,6 +1478,7 @@ body .ui-dialog .tab-content .charsheet #main .amps-input {
   padding: 4px 8px;
   color: black;
   font-family: "DM Mono";
+  font-size: 0.8rem;
   border: 1px solid black;
 }
 body .ui-dialog .tab-content .charsheet #main .gear-input {
@@ -1477,6 +1486,7 @@ body .ui-dialog .tab-content .charsheet #main .gear-input {
   padding: 4px 8px;
   color: black;
   font-family: "DM Mono";
+  font-size: 0.8rem;
   border: 1px solid black;
 }
 body .ui-dialog .tab-content .charsheet #main .risk-input {
@@ -1572,7 +1582,7 @@ body .ui-dialog .tab-content .charsheet #main .repeating-container--gearamps h2,
 }
 body .ui-dialog .tab-content .charsheet #main .repeating-container--gearamps .repeat-columns {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+  grid-template-columns: 2fr 1fr 1fr 0.75fr 0.75fr 1.5fr 2fr;
   gap: 10px;
   width: 100%;
   background-color: rgb(241, 185, 0);
@@ -1580,7 +1590,7 @@ body .ui-dialog .tab-content .charsheet #main .repeating-container--gearamps .re
 }
 body .ui-dialog .tab-content .charsheet #main .repeat-columns {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
   gap: 10px;
   width: 100%;
   background-color: rgb(241, 185, 0);

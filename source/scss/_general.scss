@@ -89,6 +89,12 @@ body{
           .character-container{
             font-size: 0.8rem;
           }
+          .gear-container{
+            font-size: 0.8rem;
+          }
+          .amps-container{
+            font-size: 0.8rem;
+          }
           .input-label{
             display: grid;
             grid-template-columns: 1fr 2fr;
@@ -270,16 +276,18 @@ body{
           }
           .amps-grid{
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+            grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
             grid-template-rows: min-content;
             font-family: 'DM Mono';
+            font-size: 0.8rem;
             gap: 10px;
           }
           .gear-grid{
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+            grid-template-columns: 2fr 1fr 1fr 0.75fr 0.75fr 1.5fr 2fr;
             grid-template-rows: min-content;
             font-family: 'DM Mono';
+            font-size: 0.8rem;
             gap: 10px;
           }
           .risk-grid{
@@ -351,6 +359,7 @@ body{
             padding: 4px 8px;
             color: black;
             font-family: 'DM Mono';
+            font-size: 0.8rem;
             border: 1px solid black;
           }
           .gear-input{
@@ -358,6 +367,7 @@ body{
             padding: 4px 8px;
             color: black;
             font-family: 'DM Mono';
+            font-size: 0.8rem;
             border: 1px solid black;
           }
           .risk-input{
@@ -451,7 +461,7 @@ body{
           }
           .repeating-container--gearamps .repeat-columns{
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+            grid-template-columns: 2fr 1fr 1fr 0.75fr 0.75fr 1.5fr 2fr;
             gap: 10px;
             width: 100%;
             background-color: rgb(241, 185, 0);
@@ -459,7 +469,7 @@ body{
           }
           .repeat-columns{
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+            grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
             gap: 10px;
             width: 100%;
             background-color: rgb(241, 185, 0);
