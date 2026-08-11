@@ -18,16 +18,16 @@
     +div({name: 'two_column'}).two-column
         +div({name: 'other_attributes'}).other-attributes
             label(class='other-label') ARMOR
-            +input({name:'armor', type:'number', value:'0'}).attribute-points
+            +input({name:'armor', type:'number', value:'0', min: '0'}).attribute-points
             label(class='other-label') PROTECTION
-            +input({name:'protection', type:'number', value:'0'}).attribute-points
+            +input({name:'protection', type:'number', value:'0', min: '0'}).attribute-points
             label(class='other-label') FIREWALL
-            +input({name:'firewall', type:'number', value:'0'}).attribute-points
+            +input({name:'firewall', type:'number', value:'0', min: '0'}).attribute-points
         +div({name: 'wound_threshold'}).wound-threshold
             label(class='other-label') WOUNDS
-            +input({name:'lightnum', type:'number', value:'0', max:'3'}).attribute-points
-            +input({name:'seriousnum', type:'number', value:'0', max:'2'}).attribute-points
-            +input({name:'incapnum', type:'number', value:'0', max:'1'}).attribute-points
+            +input({name:'lightnum', type:'number', value:'0', min: '2',max:'3'}).attribute-points
+            +input({name:'seriousnum', type:'number', value:'0', min: '1', max:'2'}).attribute-points
+            +input({name:'incapnum', type:'number', value:'1', min: '1', max:'1'}).attribute-points
             label(class='other-label') CURRENT
             span(class='fill-box')
                 +div({class:'radio-container'})
