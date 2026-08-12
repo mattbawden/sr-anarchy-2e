@@ -71,7 +71,7 @@
         +input({name:'athleticss bonus',type:'number',value:'0', trigger:{affects:['athletics_total']}}).skill-input
         +input({name:'athleticss total',type:'number',value:'0', trigger:{formula:'@{athleticss} + @{athleticss_bonus} + @{strength}'}}).skill-input
         +input({name:'athleticss rr',type:'number',value:'0', min:'0', max:'3'}).skill-input
-        +button({name: 'athleticss roll', value: '&{template:custom} {{name= @{streetname} | Athletics S Roll}} {{result=[[((@{athleticss_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]]}} {{riskresult=[[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]]}} {{riskreduction=[[@{athleticss_rr}]]}}'}).roll-button
+        +button({name: 'athleticss roll', value: '&{template:custom} {{name= @{streetname} | Athletics S Roll}} {{result=[[((@{athleticss_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]]}} {{riskresult=[[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]]}} {{riskreduction=[[@{athleticss_rr}]]}}  {{nethits=[[{{result}} + {{riskresult}} - ?{Threshold|3}]]}}'}).roll-button
         label(class='skill-label') Athletics (A)
         +input({name:'athleticsa',type:'number',value:'0', min:'0', max:'8',trigger:{affects:['athleticsa_total']}}).skill-input
         +input({name:'athleticsa bonus',type:'number',value:'0', trigger:{affects:['athletics_total']}}).skill-input

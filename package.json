@@ -11,7 +11,7 @@
   "author": "mattbawden",
   "license": "ISC",
   "devDependencies": {
-    "@kurohyou/k-scaffold": "*",
+    "@kurohyou/k-scaffold": "^2.8.0",
     "@vitest/ui": "*",
     "vitest": "*"
   }
