@@ -71,19 +71,19 @@
         +input({name:'athleticss bonus',type:'number',value:'0', trigger:{affects:['athletics_total']}}).skill-input
         +input({name:'athleticss total',type:'number',value:'0', trigger:{formula:'@{athleticss} + @{athleticss_bonus} + @{strength}'}}).skill-input
         +input({name:'athleticss rr',type:'number',value:'0', min:'0', max:'3'}).skill-input
-        +button({name: 'athleticss roll', value: '&{template:custom} {{name= @{streetname} | Athletics S Roll}} {{result=[[((@{athleticss_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]]}} {{riskresult=[[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]]}} {{riskreduction=[[@{athleticss_rr}]]}}  {{nethits=[[{{result}} + {{riskresult}} - ?{Threshold|3}]]}}'}).roll-button
+        +button({name: 'athleticss roll', value: '&{template:custom} {{name= @{streetname} | Athletics S Roll}} {{Threshold=?{Threshold|3}}} [[ [[(@{athleticss_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]] + [[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]] - ?{Threshold} ]] {{result= $[[0]]}} {{riskresult= $[[1]]}} {{riskreduction=[[@{athleticss_rr}]]}}  {{nethits=$[[2]]}}'}).roll-button
         label(class='skill-label') Athletics (A)
         +input({name:'athleticsa',type:'number',value:'0', min:'0', max:'8',trigger:{affects:['athleticsa_total']}}).skill-input
         +input({name:'athleticsa bonus',type:'number',value:'0', trigger:{affects:['athletics_total']}}).skill-input
         +input({name:'athleticsa total',type:'number',value:'0', trigger:{formula:'@{athleticsa} + @{athleticsa_bonus} + @{agility}'}}).skill-input
         +input({name:'athleticsa rr',type:'number',value:'0', min:'0', max:'3'}).skill-input
-        +button({name: 'athleticsa roll', value: '&{template:custom} {{name= @{streetname} | Athletics A Roll}} {{result=[[((@{athleticsa_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]]}} {{riskresult=[[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]]}} {{riskreduction=[[@{athleticsa_rr}]]}}'}).roll-button
+        +button({name: 'athleticsa roll', value: '&{template:custom} {{name= @{streetname} | Athletics A Roll}} {{Threshold=?{Threshold|3}}} [[ [[(@{athleticsa_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]] + [[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]] - ?{Threshold} ]] {{result= $[[0]]}} {{riskresult= $[[1]]}} {{riskreduction=[[@{athleticss_rr}]]}}  {{nethits=$[[2]]}}'}).roll-button
         label(class='skill-label') Close Combat (A)
         +input({name:'closecombata',type:'number',value:'0', min:'0', max:'8',trigger:{affects:['closecombata_total']}}).skill-input
         +input({name:'closecombata bonus',type:'number',value:'0', trigger:{affects:['closecombat_total']}}).skill-input
         +input({name:'closecombata total',type:'number',value:'0', trigger:{formula:'@{closecombata} + @{closecombata_bonus} + @{agility}'}}).skill-input
         +input({name:'closecombata rr',type:'number',value:'0', min:'0', max:'3'}).skill-input
-        +button({name: 'closecombata roll', value: '&{template:custom} {{name= @{streetname} | Close Combat A Roll}} {{result=[[((@{closecombata_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]]}} {{riskresult=[[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]]}} {{riskreduction=[[@{closecombata_rr}]]}}'}).roll-button
+        +button({name: 'closecombata roll', value: '&{template:custom} {{name= @{streetname} | Close Combat A Roll}} {{Threshold=?{Threshold|3}}} [[ [[(@{closecombata_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]] + [[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]] - ?{Threshold} ]] {{result= $[[0]]}} {{riskresult= $[[1]]}} {{riskreduction=[[@{athleticss_rr}]]}}  {{nethits=$[[2]]}}'}).roll-button
         label(class='skill-label') Close Combat (W)
         +input({name:'closecombatw',type:'number',value:'0', min:'0', max:'8',trigger:{affects:['closecombatw_total']}}).skill-input
         +input({name:'closecombatw bonus',type:'number',value:'0', trigger:{affects:['closecombat_total']}}).skill-input
