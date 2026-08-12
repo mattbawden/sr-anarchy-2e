@@ -71,127 +71,127 @@
         +input({name:'athleticss bonus',type:'number',value:'0', trigger:{affects:['athletics_total']}}).skill-input
         +input({name:'athleticss total',type:'number',value:'0', trigger:{formula:'@{athleticss} + @{athleticss_bonus} + @{strength}'}}).skill-input
         +input({name:'athleticss rr',type:'number',value:'0', min:'0', max:'3'}).skill-input
-        +button({name: 'athleticss roll', value: '&{template:custom} {{name= @{streetname} | Athletics S Roll}} {{Threshold=?{Threshold|3}}} [[ [[(@{athleticss_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]] + [[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]] - ?{Threshold} ]] {{result= $[[0]]}} {{riskresult= $[[1]]}} {{riskreduction=[[@{athleticss_rr}]]}}  {{nethits=$[[2]]}}'}).roll-button
+        +button({name: 'athleticss roll', value: '&{template:custom} {{name= @{streetname} | Athletics S Roll}} {{Threshold=?{Threshold|3}}} [[ [[(@{athleticss_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]] + [[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]] - ?{Threshold} ]] {{result= $[[0]]}} {{riskresult= $[[1]]}} {{riskreduction=@{athleticss_rr}}}  {{nethits=$[[2]]}}'}).roll-button
         label(class='skill-label') Athletics (A)
         +input({name:'athleticsa',type:'number',value:'0', min:'0', max:'8',trigger:{affects:['athleticsa_total']}}).skill-input
         +input({name:'athleticsa bonus',type:'number',value:'0', trigger:{affects:['athletics_total']}}).skill-input
         +input({name:'athleticsa total',type:'number',value:'0', trigger:{formula:'@{athleticsa} + @{athleticsa_bonus} + @{agility}'}}).skill-input
         +input({name:'athleticsa rr',type:'number',value:'0', min:'0', max:'3'}).skill-input
-        +button({name: 'athleticsa roll', value: '&{template:custom} {{name= @{streetname} | Athletics A Roll}} {{Threshold=?{Threshold|3}}} [[ [[(@{athleticsa_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]] + [[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]] - ?{Threshold} ]] {{result= $[[0]]}} {{riskresult= $[[1]]}} {{riskreduction=[[@{athleticss_rr}]]}}  {{nethits=$[[2]]}}'}).roll-button
+        +button({name: 'athleticsa roll', value: '&{template:custom} {{name= @{streetname} | Athletics A Roll}} {{Threshold=?{Threshold|3}}} [[ [[(@{athleticsa_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]] + [[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]] - ?{Threshold} ]] {{result= $[[0]]}} {{riskresult= $[[1]]}} {{riskreduction=@{athleticsa_rr}}}  {{nethits=$[[2]]}}'}).roll-button
         label(class='skill-label') Close Combat (A)
         +input({name:'closecombata',type:'number',value:'0', min:'0', max:'8',trigger:{affects:['closecombata_total']}}).skill-input
         +input({name:'closecombata bonus',type:'number',value:'0', trigger:{affects:['closecombat_total']}}).skill-input
         +input({name:'closecombata total',type:'number',value:'0', trigger:{formula:'@{closecombata} + @{closecombata_bonus} + @{agility}'}}).skill-input
         +input({name:'closecombata rr',type:'number',value:'0', min:'0', max:'3'}).skill-input
-        +button({name: 'closecombata roll', value: '&{template:custom} {{name= @{streetname} | Close Combat A Roll}} {{Threshold=?{Threshold|3}}} [[ [[(@{closecombata_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]] + [[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]] - ?{Threshold} ]] {{result= $[[0]]}} {{riskresult= $[[1]]}} {{riskreduction=[[@{athleticss_rr}]]}}  {{nethits=$[[2]]}}'}).roll-button
+        +button({name: 'closecombata roll', value: '&{template:custom} {{name= @{streetname} | Close Combat A Roll}} {{Threshold=?{Threshold|3}}} [[ [[(@{closecombata_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]] + [[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]] - ?{Threshold} ]] {{result= $[[0]]}} {{riskresult= $[[1]]}} {{riskreduction=@{closecombata_rr}}}  {{nethits=$[[2]]}}'}).roll-button
         label(class='skill-label') Close Combat (W)
         +input({name:'closecombatw',type:'number',value:'0', min:'0', max:'8',trigger:{affects:['closecombatw_total']}}).skill-input
         +input({name:'closecombatw bonus',type:'number',value:'0', trigger:{affects:['closecombat_total']}}).skill-input
         +input({name:'closecombatw total',type:'number',value:'0', trigger:{formula:'@{closecombatw} + @{closecombatw_bonus} + @{willpower}'}}).skill-input
         +input({name:'closecombatw rr',type:'number',value:'0', min:'0', max:'3'}).skill-input
-        +button({name: 'closecombatw roll', value: '&{template:custom} {{name= @{streetname} | Close Combat W Roll}} {{result=[[((@{closecombatw_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]]}} {{riskresult=[[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]]}} {{riskreduction=[[@{closecombatw_rr}]]}}'}).roll-button
+        +button({name: 'closecombatw roll', value: '&{template:custom} {{name= @{streetname} | Close Combat W Roll}} {{Threshold=?{Threshold|3}}} [[ [[(@{closecombatw_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]] + [[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]] - ?{Threshold} ]] {{result= $[[0]]}} {{riskresult= $[[1]]}} {{riskreduction=@{closecombatw_rr}}}  {{nethits=$[[2]]}}'}).roll-button
         label(class='skill-label') Conjuring (L)
         +input({name:'conjuringl',type:'number',value:'0', min:'0', max:'8',trigger:{affects:['conjuringl_total']}}).skill-input
         +input({name:'conjuringl bonus',type:'number',value:'0', trigger:{affects:['conjuring_total']}}).skill-input
         +input({name:'conjuringl total',type:'number',value:'0', trigger:{formula:'@{conjuringl} + @{conjuringl_bonus} + @{logic}'}}).skill-input
         +input({name:'conjuringl rr',type:'number',value:'0', min:'0', max:'3'}).skill-input
-        +button({name: 'conjuringl roll', value: '&{template:custom} {{name= @{streetname} | Conjuring L Roll}} {{result=[[((@{conjuringl_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]]}} {{riskresult=[[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]]}} {{riskreduction=[[@{conjuringl_rr}]]}}'}).roll-button
+        +button({name: 'conjuringl roll', value: '&{template:custom} {{name= @{streetname} | Conjuring L Roll}} {{Threshold=?{Threshold|3}}} [[ [[(@{conjuringl_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]] + [[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]] - ?{Threshold} ]] {{result= $[[0]]}} {{riskresult= $[[1]]}} {{riskreduction=@{conjuringl_rr}}}  {{nethits=$[[2]]}}'}).roll-button
         label(class='skill-label') Conjuring (C)
         +input({name:'conjuringc',type:'number',value:'0', min:'0', max:'8',trigger:{affects:['conjuringc_total']}}).skill-input
         +input({name:'conjuringc bonus',type:'number',value:'0', trigger:{affects:['conjuring_total']}}).skill-input
         +input({name:'conjuringc total',type:'number',value:'0', trigger:{formula:'@{conjuringc} + @{conjuringc_bonus} + @{charisma}'}}).skill-input
         +input({name:'conjuringc rr',type:'number',value:'0', min:'0', max:'3'}).skill-input
-        +button({name: 'conjuringc roll', value: '&{template:custom} {{name= @{streetname} | Conjuring C Roll}} {{result=[[((@{conjuringc_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]]}} {{riskresult=[[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]]}} {{riskreduction=[[@{conjuringc_rr}]]}}'}).roll-button
+        +button({name: 'conjuringc roll', value: '&{template:custom} {{name= @{streetname} | Conjuring C Roll}} {{Threshold=?{Threshold|3}}} [[ [[(@{conjuringc_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]] + [[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]] - ?{Threshold} ]] {{result= $[[0]]}} {{riskresult= $[[1]]}} {{riskreduction=@{conjuringc_rr}}}  {{nethits=$[[2]]}}'}).roll-button
         label(class='skill-label') Cracking (L)
         +input({name:'crackingl',type:'number',value:'0', min:'0', max:'8',trigger:{affects:['crackingl_total']}}).skill-input
         +input({name:'crackingl bonus',type:'number',value:'0', trigger:{affects:['cracking_total']}}).skill-input
         +input({name:'crackingl total',type:'number',value:'0', trigger:{formula:'@{crackingl} + @{crackingl_bonus} + @{logic}'}}).skill-input
         +input({name:'crackingl rr',type:'number',value:'0', min:'0', max:'3'}).skill-input
-        +button({name: 'crackingl roll', value: '&{template:custom} {{name= @{streetname} | Cracking L Roll}} {{result=[[((@{crackingl_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]]}} {{riskresult=[[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]]}} {{riskreduction=[[@{crackingl_rr}]]}}'}).roll-button
+        +button({name: 'crackingl roll', value: '&{template:custom} {{name= @{streetname} | Cracking L Roll}} {{Threshold=?{Threshold|3}}} [[ [[(@{crackingl_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]] + [[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]] - ?{Threshold} ]] {{result= $[[0]]}} {{riskresult= $[[1]]}} {{riskreduction=@{crackingl_rr}}}  {{nethits=$[[2]]}}'}).roll-button
         label(class='skill-label') Cracking (W)
         +input({name:'crackingw',type:'number',value:'0', min:'0', max:'8',trigger:{affects:['crackingw_total']}}).skill-input
         +input({name:'crackingw bonus',type:'number',value:'0', trigger:{affects:['cracking_total']}}).skill-input
         +input({name:'crackingw total',type:'number',value:'0', trigger:{formula:'@{crackingw} + @{crackingw_bonus} + @{willpower}'}}).skill-input
         +input({name:'crackingw rr',type:'number',value:'0', min:'0', max:'3'}).skill-input
-        +button({name: 'crackingw roll', value: '&{template:custom} {{name= @{streetname} | Cracking W Roll}} {{result=[[((@{crackingw_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]]}} {{riskresult=[[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]]}} {{riskreduction=[[@{crackingw_rr}]]}}'}).roll-button
+        +button({name: 'crackingw roll', value: '&{template:custom} {{name= @{streetname} | Cracking W Roll}} {{Threshold=?{Threshold|3}}} [[ [[(@{crackingw_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]] + [[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]] - ?{Threshold} ]] {{result= $[[0]]}} {{riskresult= $[[1]]}} {{riskreduction=@{crackingw_rr}}}  {{nethits=$[[2]]}}'}).roll-button
         label(class='skill-label') Electronics (L)
         +input({name:'electronicsl',type:'number',value:'0', min:'0', max:'8',trigger:{affects:['electronicsl_total']}}).skill-input
         +input({name:'electronicsl bonus',type:'number',value:'0', trigger:{affects:['electronics_total']}}).skill-input
         +input({name:'electronicsl total',type:'number',value:'0', trigger:{formula:'@{electronicsl} + @{electronicsl_bonus} + @{logic}'}}).skill-input
         +input({name:'electronicsl rr',type:'number',value:'0', min:'0', max:'3'}).skill-input
-        +button({name: 'electronicsl roll', value: '&{template:custom} {{name= @{streetname} | Electronics L Roll}} {{result=[[((@{electronicsl_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]]}} {{riskresult=[[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]]}} {{riskreduction=[[@{electronicsl_rr}]]}}'}).roll-button
+        +button({name: 'electronicsl roll', value: '&{template:custom} {{name= @{streetname} | Electronics L Roll}} {{Threshold=?{Threshold|3}}} [[ [[(@{electronicsl_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]] + [[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]] - ?{Threshold} ]] {{result= $[[0]]}} {{riskresult= $[[1]]}} {{riskreduction=@{electronicsl_rr}}}  {{nethits=$[[2]]}}'}).roll-button
         label(class='skill-label') Engineering (L)
         +input({name:'engineeringl',type:'number',value:'0', min:'0', max:'8',trigger:{affects:['engineeringl_total']}}).skill-input
         +input({name:'engineeringl bonus',type:'number',value:'0', trigger:{affects:['engineering_total']}}).skill-input
         +input({name:'engineeringl total',type:'number',value:'0', trigger:{formula:'@{engineeringl} + @{engineeringl_bonus} + @{logic}'}}).skill-input
         +input({name:'engineeringl rr',type:'number',value:'0', min:'0', max:'3'}).skill-input
-        +button({name: 'engineeringl roll', value: '&{template:custom} {{name= @{streetname} | Engineering L Roll}} {{result=[[((@{engineeringl_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]]}} {{riskresult=[[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]]}} {{riskreduction=[[@{engineeringl_rr}]]}}'}).roll-button
+        +button({name: 'engineeringl roll', value: '&{template:custom} {{name= @{streetname} | Engineering L Roll}} {{Threshold=?{Threshold|3}}} [[ [[(@{engineeringl_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]] + [[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]] - ?{Threshold} ]] {{result= $[[0]]}} {{riskresult= $[[1]]}} {{riskreduction=@{engineeringl_rr}}}  {{nethits=$[[2]]}}'}).roll-button
         label(class='skill-label') Influence (C)
         +input({name:'influencec',type:'number',value:'0', min:'0', max:'8',trigger:{affects:['influencec_total']}}).skill-input
         +input({name:'influencec bonus',type:'number',value:'0', trigger:{affects:['influence_total']}}).skill-input
         +input({name:'influencec total',type:'number',value:'0', trigger:{formula:'@{influencec} + @{influencec_bonus} + @{charisma}'}}).skill-input
         +input({name:'influencec rr',type:'number',value:'0', min:'0', max:'3'}).skill-input
-        +button({name: 'influencec roll', value: '&{template:custom} {{name= @{streetname} | Influence C Roll}} {{result=[[((@{influencec_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]]}} {{riskresult=[[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]]}} {{riskreduction=[[@{influencec_rr}]]}}'}).roll-button
+        +button({name: 'influencec roll', value: '&{template:custom} {{name= @{streetname} | Influence C Roll}} {{Threshold=?{Threshold|3}}} [[ [[(@{influencec_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]] + [[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]] - ?{Threshold} ]] {{result= $[[0]]}} {{riskresult= $[[1]]}} {{riskreduction=@{influencec_rr}}}  {{nethits=$[[2]]}}'}).roll-button
         label(class='skill-label') Network (C)
         +input({name:'networkc',type:'number',value:'0', min:'0', max:'8',trigger:{affects:['networkc_total']}}).skill-input
         +input({name:'networkc bonus',type:'number',value:'0', trigger:{affects:['network_total']}}).skill-input
         +input({name:'networkc total',type:'number',value:'0', trigger:{formula:'@{networkc} + @{networkc_bonus} + @{charisma}'}}).skill-input
         +input({name:'networkc rr',type:'number',value:'0', min:'0', max:'3'}).skill-input
-        +button({name: 'networkc roll', value: '&{template:custom} {{name= @{streetname} | Network C Roll}} {{result=[[((@{networkc_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]]}} {{riskresult=[[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]]}} {{riskreduction=[[@{networkc_rr}]]}}'}).roll-button
+        +button({name: 'networkc roll', value: '&{template:custom} {{name= @{streetname} | Network C Roll}} {{Threshold=?{Threshold|3}}} [[ [[(@{networkc_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]] + [[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]] - ?{Threshold} ]] {{result= $[[0]]}} {{riskresult= $[[1]]}} {{riskreduction=@{networkc_rr}}}  {{nethits=$[[2]]}}'}).roll-button
         label(class='skill-label') Perception (L)
         +input({name:'perceptionl',type:'number',value:'0', min:'0', max:'8',trigger:{affects:['perceptionl_total']}}).skill-input
         +input({name:'perceptionl bonus',type:'number',value:'0', trigger:{affects:['perception_total']}}).skill-input
         +input({name:'perceptionl total',type:'number',value:'0', trigger:{formula:'@{perceptionl} + @{perceptionl_bonus} + @{logic}'}}).skill-input
         +input({name:'perceptionl rr',type:'number',value:'0', min:'0', max:'3'}).skill-input
-        +button({name: 'perceptionl roll', value: '&{template:custom} {{name= @{streetname} | Perception L Roll}} {{result=[[((@{perceptionl_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]]}} {{riskresult=[[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]]}} {{riskreduction=[[@{perceptionl_rr}]]}}'}).roll-button
+        +button({name: 'perceptionl roll', value: '&{template:custom} {{name= @{streetname} | Perception L Roll}} {{Threshold=?{Threshold|3}}} [[ [[(@{perceptionl_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]] + [[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]] - ?{Threshold} ]] {{result= $[[0]]}} {{riskresult= $[[1]]}} {{riskreduction=@{perceptionl_rr}}}  {{nethits=$[[2]]}}'}).roll-button
         label(class='skill-label') Piloting (A)
         +input({name:'pilotinga',type:'number',value:'0', min:'0', max:'8',trigger:{affects:['pilotinga_total']}}).skill-input
         +input({name:'pilotinga bonus',type:'number',value:'0', trigger:{affects:['piloting_total']}}).skill-input
         +input({name:'pilotinga total',type:'number',value:'0', trigger:{formula:'@{pilotinga} + @{pilotinga_bonus} + @{agility}'}}).skill-input
         +input({name:'pilotinga rr',type:'number',value:'0', min:'0', max:'3'}).skill-input
-        +button({name: 'pilotinga roll', value: '&{template:custom} {{name= @{streetname} | Piloting A Roll}} {{result=[[((@{pilotinga_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]]}} {{riskresult=[[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]]}} {{riskreduction=[[@{pilotinga_rr}]]}}'}).roll-button
+        +button({name: 'pilotinga roll', value: '&{template:custom} {{name= @{streetname} | Piloting A Roll}} {{Threshold=?{Threshold|3}}} [[ [[(@{pilotinga_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]] + [[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]] - ?{Threshold} ]] {{result= $[[0]]}} {{riskresult= $[[1]]}} {{riskreduction=@{pilotinga_rr}}}  {{nethits=$[[2]]}}'}).roll-button
         label(class='skill-label') Ranged Weapons (A)
         +input({name:'rangeda',type:'number',value:'0', min:'0', max:'8',trigger:{affects:['rangeda_total']}}).skill-input
         +input({name:'rangeda bonus',type:'number',value:'0', trigger:{affects:['ranged_total']}}).skill-input
         +input({name:'rangeda total',type:'number',value:'0', trigger:{formula:'@{rangeda} + @{rangeda_bonus} + @{agility}'}}).skill-input
         +input({name:'rangeda rr',type:'number',value:'0', min:'0', max:'3'}).skill-input
-        +button({name: 'rangeda roll', value: '&{template:custom} {{name= @{streetname} | Ranged Weapons A Roll}} {{result=[[((@{rangeda_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]]}} {{riskresult=[[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]]}} {{riskreduction=[[@{rangeda_rr}]]}}'}).roll-button
+        +button({name: 'rangeda roll', value: '&{template:custom} {{name= @{streetname} | Ranged Weapons A Roll}} {{Threshold=?{Threshold|3}}} [[ [[(@{rangeda_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]] + [[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]] - ?{Threshold} ]] {{result= $[[0]]}} {{riskresult= $[[1]]}} {{riskreduction=@{rangeda_rr}}}  {{nethits=$[[2]]}}'}).roll-button
         label(class='skill-label') Sorcery (W)
         +input({name:'sorceryw',type:'number',value:'0', min:'0', max:'8',trigger:{affects:['sorceryw_total']}}).skill-input
         +input({name:'sorceryw bonus',type:'number',value:'0', trigger:{affects:['sorcery_total']}}).skill-input
         +input({name:'sorceryw total',type:'number',value:'0', trigger:{formula:'@{sorceryw} + @{sorceryw_bonus} + @{willpower}'}}).skill-input
         +input({name:'sorceryw rr',type:'number',value:'0', min:'0', max:'3'}).skill-input
-        +button({name: 'sorceryw roll', value: '&{template:custom} {{name= @{streetname} | Sorcery W Roll}} {{result=[[((@{sorceryw_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]]}} {{riskresult=[[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]]}} {{riskreduction=[[@{sorceryw_rr}]]}}'}).roll-button
+        +button({name: 'sorceryw roll', value: '&{template:custom} {{name= @{streetname} | Sorcery W Roll}} {{Threshold=?{Threshold|3}}} [[ [[(@{sorceryw_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]] + [[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]] - ?{Threshold} ]] {{result= $[[0]]}} {{riskresult= $[[1]]}} {{riskreduction=@{sorceryw_rr}}}  {{nethits=$[[2]]}}'}).roll-button
         label(class='skill-label') Stealth (A)
         +input({name:'stealtha',type:'number',value:'0', min:'0', max:'8',trigger:{affects:['stealtha_total']}}).skill-input
         +input({name:'stealtha bonus',type:'number',value:'0', trigger:{affects:['stealth_total']}}).skill-input
         +input({name:'stealtha total',type:'number',value:'0', trigger:{formula:'@{stealtha} + @{stealtha_bonus} + @{agility}'}}).skill-input
         +input({name:'stealtha rr',type:'number',value:'0', min:'0', max:'3'}).skill-input
-        +button({name: 'stealtha roll', value: '&{template:custom} {{name= @{streetname} | Stealth A Roll}} {{result=[[((@{stealtha_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]]}} {{riskresult=[[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]]}} {{riskreduction=[[@{stealtha_rr}]]}}'}).roll-button
+        +button({name: 'stealtha roll', value: '&{template:custom} {{name= @{streetname} | Stealth A Roll}} {{Threshold=?{Threshold|3}}} [[ [[(@{stealtha_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]] + [[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]] - ?{Threshold} ]] {{result= $[[0]]}} {{riskresult= $[[1]]}} {{riskreduction=@{stealtha_rr}}}  {{nethits=$[[2]]}}'}).roll-button
         label(class='skill-label') Stealth (L)
         +input({name:'stealthl',type:'number',value:'0', min:'0', max:'8',trigger:{affects:['stealthl_total']}}).skill-input
         +input({name:'stealthl bonus',type:'number',value:'0', trigger:{affects:['stealth_total']}}).skill-input
         +input({name:'stealthl total',type:'number',value:'0', trigger:{formula:'@{stealthl} + @{stealthl_bonus} + @{logic}'}}).skill-input
         +input({name:'stealthl rr',type:'number',value:'0', min:'0', max:'3'}).skill-input
-        +button({name: 'stealthl roll', value: '&{template:custom} {{name= @{streetname} | Stealth L Roll}} {{result=[[((@{stealthl_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]]}} {{riskresult=[[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]]}} {{riskreduction=[[@{stealthl_rr}]]}}'}).roll-button
+        +button({name: 'stealthl roll', value: '&{template:custom} {{name= @{streetname} | Stealth L Roll}} {{Threshold=?{Threshold|3}}} [[ [[(@{stealthl_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]] + [[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]] - ?{Threshold} ]] {{result= $[[0]]}} {{riskresult= $[[1]]}} {{riskreduction=@{stealthl_rr}}}  {{nethits=$[[2]]}}'}).roll-button
         label(class='skill-label') Survival (L)
         +input({name:'survivall',type:'number',value:'0', min:'0', max:'8',trigger:{affects:['survivall_total']}}).skill-input
         +input({name:'survivall bonus',type:'number',value:'0', trigger:{affects:['survival_total']}}).skill-input
         +input({name:'survivall total',type:'number',value:'0', trigger:{formula:'@{survivall} + @{survivall_bonus} + @{logic}'}}).skill-input
         +input({name:'survivall rr',type:'number',value:'0', min:'0', max:'3'}).skill-input
-        +button({name: 'survivall roll', value: '&{template:custom} {{name= @{streetname} | Survival L Roll}} {{result=[[((@{survivall_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]]}} {{riskresult=[[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]]}} {{riskreduction=[[@{survivall_rr}]]}}'}).roll-button
+        +button({name: 'survivall roll', value: '&{template:custom} {{name= @{streetname} | Survival L Roll}} {{Threshold=?{Threshold|3}}} [[ [[(@{survivall_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]] + [[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]] - ?{Threshold} ]] {{result= $[[0]]}} {{riskresult= $[[1]]}} {{riskreduction=@{survivall_rr}}}  {{nethits=$[[2]]}}'}).roll-button
         label(class='skill-label') Survival (C)
         +input({name:'survivalc',type:'number',value:'0', min:'0', max:'8',trigger:{affects:['survivalc_total']}}).skill-input
         +input({name:'survivalc bonus',type:'number',value:'0', trigger:{affects:['survival_total']}}).skill-input
         +input({name:'survivalc total',type:'number',value:'0', trigger:{formula:'@{survivalc} + @{survivalc_bonus} + @{charisma}'}}).skill-input
         +input({name:'survivalc rr',type:'number',value:'0', min:'0', max:'3'}).skill-input
-        +button({name: 'survivalc roll', value: '&{template:custom} {{name= @{streetname} | Survival C Roll}} {{result=[[((@{survivalc_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]]}} {{riskresult=[[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]]}} {{riskreduction=[[@{survivalc_rr}]]}}'}).roll-button
+        +button({name: 'survivalc roll', value: '&{template:custom} {{name= @{streetname} | Survival C Roll}} {{Threshold=?{Threshold|3}}} [[ [[(@{survivalc_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]] + [[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]] - ?{Threshold} ]] {{result= $[[0]]}} {{riskresult= $[[1]]}} {{riskreduction=@{survivalc_rr}}}  {{nethits=$[[2]]}}'}).roll-button
         label(class='skill-label') Survival (W)
         +input({name:'survivalw',type:'number',value:'0', min:'0', max:'8',trigger:{affects:['survivalw_total']}}).skill-input
         +input({name:'survivalw bonus',type:'number',value:'0', trigger:{affects:['survival_total']}}).skill-input
         +input({name:'survivalw total',type:'number',value:'0', trigger:{formula:'@{survivalw} + @{survivalw_bonus} + @{willpower}'}}).skill-input
         +input({name:'survivalw rr',type:'number',value:'0', min:'0', max:'3'}).skill-input
-        +button({name: 'survivalw roll', value: '&{template:custom} {{name= @{streetname} | Survival W Roll}} {{result=[[((@{survivalw_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]]}} {{riskresult=[[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]]}} {{riskreduction=[[@{survivalw_rr}]]}}'}).roll-button
+        +button({name: 'survivalw roll', value: '&{template:custom} {{name= @{streetname} | Survival W Roll}} {{Threshold=?{Threshold|3}}} [[ [[(@{survivalw_total}+?{Dice Modifier|0}-?{Risk Dice|0})d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})]] + [[((?{Risk Dice|0}d6>?{Advantage|Standard,5|Advantage,4|Disadvantage,6})*2)]] - ?{Threshold} ]] {{result= $[[0]]}} {{riskresult= $[[1]]}} {{riskreduction=@{survivalw_rr}}}  {{nethits=$[[2]]}}'}).roll-button
     +div({name: 'specializations'}).other-elements
         label(class='header-label') SPECIALIZATIONS
         +adaptiveTextarea({name:'specializations', placeholder:'Enter Specializations here...'  })

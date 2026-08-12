@@ -9,10 +9,7 @@
       span.description {{result}} hits
   +templateConditionalDisplay('riskresult').template-row
     +div({class: 'sheet-template-riskresult'})
-      span.description {{riskresult}} risk hits
-  +templateConditionalDisplay('riskreduction').template-row
-    +div({class: 'sheet-template-riskreduction'})
-      span.description {{riskreduction}} risk reduction
+      span.description {{riskresult}} risk hits with risk reduction {{riskreduction}}
   +templateConditionalDisplay('nethits').template-row
     +div({class: 'sheet-template-riskreduction'})
       span.description {{nethits}} net hits against threshold {{Threshold}}
