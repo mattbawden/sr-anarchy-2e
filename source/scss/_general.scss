@@ -157,6 +157,11 @@ body{
             font-family: 'DM Mono';
             font-size: 0.8rem;
           }
+          .wound-bonus{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+          }
           .wound-threshold{
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -232,6 +237,17 @@ body{
             border: 1px solid black;
             font-family: 'DM Mono';
             font-size: 0.8rem;
+          }
+          .bonus-label{
+            text-align: center;
+            background-color: rgb(241, 185, 0);
+            color: rgb(128, 50, 31);
+            padding: 4px 8px;
+            font-weight: bold;
+            border: 1px solid black;
+            font-family: 'DM Mono';
+            font-size: 0.2rem;
+            width: 20px;
           }
           .risk-label{
             text-align: center;
@@ -436,6 +452,24 @@ body{
             width: 10px;
             height: 10px;
             display: block;
+          }
+          .show-light-bonus{
+            width: 5px;
+            height: 5px;
+            border: 1px solid black;
+            margin: 5px;
+          }
+          .show-serious-bonus{
+            width: 5px;
+            height: 5px;
+            border: 1px solid black;
+            margin: 5px;
+          }
+          input.show-light-bonus:not(:checked) ~ .radio-container .bonus-light{
+            display: none;
+          }
+          input.show-serious-bonus:not(:checked) ~ .radio-container .bonus-serious{
+            display: none;
           }
           /* If the radiobox is checked, or if it has a checked radiobox after it, style it as if it was checked */
           .radio-input:checked,

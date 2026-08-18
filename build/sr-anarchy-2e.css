@@ -1276,6 +1276,11 @@ body .ui-dialog .tab-content .charsheet #main .other-attributes {
   font-family: "DM Mono";
   font-size: 0.8rem;
 }
+body .ui-dialog .tab-content .charsheet #main .wound-bonus {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 body .ui-dialog .tab-content .charsheet #main .wound-threshold {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -1351,6 +1356,17 @@ body .ui-dialog .tab-content .charsheet #main .other-label {
   border: 1px solid black;
   font-family: "DM Mono";
   font-size: 0.8rem;
+}
+body .ui-dialog .tab-content .charsheet #main .bonus-label {
+  text-align: center;
+  background-color: rgb(241, 185, 0);
+  color: rgb(128, 50, 31);
+  padding: 4px 8px;
+  font-weight: bold;
+  border: 1px solid black;
+  font-family: "DM Mono";
+  font-size: 0.2rem;
+  width: 20px;
 }
 body .ui-dialog .tab-content .charsheet #main .risk-label {
   text-align: center;
@@ -1555,6 +1571,24 @@ body .ui-dialog .tab-content .charsheet #main .radio-input {
   width: 10px;
   height: 10px;
   display: block;
+}
+body .ui-dialog .tab-content .charsheet #main .show-light-bonus {
+  width: 5px;
+  height: 5px;
+  border: 1px solid black;
+  margin: 5px;
+}
+body .ui-dialog .tab-content .charsheet #main .show-serious-bonus {
+  width: 5px;
+  height: 5px;
+  border: 1px solid black;
+  margin: 5px;
+}
+body .ui-dialog .tab-content .charsheet #main input.show-light-bonus:not(:checked) ~ .radio-container .bonus-light {
+  display: none;
+}
+body .ui-dialog .tab-content .charsheet #main input.show-serious-bonus:not(:checked) ~ .radio-container .bonus-serious {
+  display: none;
 }
 body .ui-dialog .tab-content .charsheet #main {
   /* If the radiobox is checked, or if it has a checked radiobox after it, style it as if it was checked */

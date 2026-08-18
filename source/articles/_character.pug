@@ -27,19 +27,19 @@
             +input({name:'essence', type:'number', value:'6', min: '1', max: '6'}).attribute-points
         +div({name: 'wound_threshold'}).wound-threshold
             label(class='other-label') WOUNDS
-            +input({name:'lightnum', type:'number', value:'0', min: '2',max:'3'}).attribute-points
-            +input({name:'seriousnum', type:'number', value:'0', min: '1', max:'2'}).attribute-points
-            +input({name:'incapnum', type:'number', value:'1', min: '1', max:'1'}).attribute-points
-            label(class='other-label') CURRENT
             span(class='fill-box')
+                +input({name: 'bonuslight', type: 'checkbox'}).show-light-bonus
                 +div({class:'radio-container'})
                     +input({name:'light1', type:'checkbox', value:'1', id:'light-1'}).radio-input
                     +input({name:'light2', type:'checkbox', value:'2', id:'light-2'}).radio-input
-                    +input({name:'light3', type:'checkbox', value:'3', id:'light-3'}).radio-input
+                    +div({class:'bonus-light'})
+                        +input({name:'light3', type:'checkbox', value:'3', id:'light-3'}).radio-input
             span(class='fill-box')
+                +input({name: 'bonusserious', type: 'checkbox'}).show-serious-bonus
                 +div({class:'radio-container'})
                     +input({name:'serious1', type:'checkbox', value:'1', id:'serious-1'}).radio-input
-                    +input({name:'serious2', type:'checkbox', value:'2', id:'serious-2'}).radio-input
+                    +div({class:'bonus-serious'})
+                        +input({name:'serious2', type:'checkbox', value:'2', id:'serious-2'}).radio-input
             span(class='fill-box')
                 +div({class:'radio-container'})
                     +input({name:'incap1', type:'checkbox', value:'1', id:'incap-1'}).radio-input
