@@ -13,3 +13,6 @@
   +templateConditionalDisplay('nethits').template-row
     +div({class: 'sheet-template-riskreduction'})
       span.description {{nethits}} net hits against threshold {{Threshold}}
+  +templateConditionalDisplay('DV').template-row
+    +div({class: 'sheet-template-dv'})
+      span.description Damage Value {{DV}} + Net Hits

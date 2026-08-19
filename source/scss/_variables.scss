@@ -3,9 +3,13 @@
 @mixin all {
   @include k.variables;
   // Customize your variables here
+  --checkColor: rgb(128, 50, 31);
+  --checkContent: "x";
 }
 
 @mixin dark {
   @include k.darkMode;
   // Customize your darkmode variable states and styling here.
+  --checkColor: rgb(128, 50, 31);
+  --checkContent: "x";
 }

@@ -1,5 +1,6 @@
 {
   "amps": "amps",
+  "atk": "atk",
   "CONCEPT": "CONCEPT",
   "cost": "cost",
   "dv": "dv",
@@ -10,11 +11,13 @@
   "name": "name",
   "range": "range",
   "rating": "rating",
+  "skill": "skill",
   "STREETNAME": "STREETNAME",
   "tabs-sr-anarchy-2e-amps": "Amps",
   "tabs-sr-anarchy-2e-character": "Character",
   "tabs-sr-anarchy-2e-gear": "Gear",
   "type": "type",
+  "weapon": "weapon",
   "tabs-sr-anarchy-2e-npc": "NPC",
   "tabs-sr-anarchy-2e-settings": "Settings"
 }
