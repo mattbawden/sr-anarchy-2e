@@ -1409,7 +1409,7 @@ body .ui-dialog .tab-content .charsheet #main .weapon-label {
 }
 body .ui-dialog .tab-content .charsheet #main .skill-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 30px;
+  grid-template-columns: 2.5fr 1fr 1fr 1fr 1fr 1fr 30px;
   grid-template-rows: min-content;
   border: 1px solid black;
   font-family: "DM Mono";
@@ -1497,6 +1497,9 @@ body .ui-dialog .tab-content .charsheet #main .skill-label {
 }
 body .ui-dialog .tab-content .charsheet #main .skill-input {
   width: 100%;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
   color: black;
   font-family: "DM Mono";
   border: 1px solid black;
@@ -1504,6 +1507,9 @@ body .ui-dialog .tab-content .charsheet #main .skill-input {
 }
 body .ui-dialog .tab-content .charsheet #main .amps-input {
   width: 100%;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
   padding: 4px 8px;
   color: black;
   font-family: "DM Mono";
@@ -1534,6 +1540,9 @@ body .ui-dialog .tab-content .charsheet #main .weapon-input {
 }
 body .ui-dialog .tab-content .charsheet #main .risk-input {
   width: 100%;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
   color: rgb(128, 50, 31);
   font-family: "DM Mono";
   font-size: 0.5rem;
@@ -1587,6 +1596,9 @@ body .ui-dialog .tab-content .charsheet #main button[type=roll].roll-button::bef
 body .ui-dialog .tab-content .charsheet #main .radio-container {
   /* style the layout and whatnot of the radio container as you need to */
   display: flex;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
   gap: 0.5rem;
 }
 body .ui-dialog .tab-content .charsheet #main .radio-input {

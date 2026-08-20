@@ -288,7 +288,7 @@ body{
           }
           .skill-grid{
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 30px;
+            grid-template-columns: 2.5fr 1fr 1fr 1fr 1fr 1fr 30px;
             grid-template-rows: min-content;
             border: 1px solid black;
             font-family: 'DM Mono';
@@ -376,6 +376,9 @@ body{
           }
           .skill-input{
             width: 100%;
+            align-items: center;
+            justify-items: center;
+            text-align: center;
             color: black;
             font-family: 'DM Mono';
             border: 1px solid black;
@@ -383,6 +386,9 @@ body{
           }
           .amps-input{
             width: 100%;
+            align-items: center;
+            justify-items: center;
+            text-align: center;
             padding: 4px 8px;
             color: black;
             font-family: 'DM Mono';
@@ -413,6 +419,9 @@ body{
           }
           .risk-input{
             width: 100%;
+            align-items: center;
+            justify-items: center;
+            text-align: center;
             color: rgb(128, 50, 31);
             font-family: 'DM Mono';
             font-size: 0.5rem;
@@ -466,6 +475,9 @@ body{
           .radio-container{
             /* style the layout and whatnot of the radio container as you need to */
             display: flex;
+            align-items: center;
+            justify-items: center;
+            text-align: center;
             gap: 0.5rem;
           }
           .radio-input{
